@@ -1,0 +1,195 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
+// endbower
+
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
+
+@import "marketing.scss";
+
+body {
+  font-family: "Lato", "Helvetica Neue", "Helvetica", "Arial", Sans Serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+.header {
+  position: fixed;
+  width: 100%
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+
+  p + h4 {
+    margin-top: 28px;
+  }
+}
+
+// Bootstrap Overwrites
+.container-fluid {
+}
+
+.nav {
+
+  margin-bottom: 10px;
+
+  > li {
+
+    > a {
+      padding-right: 16px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 300;
+      }
+    }
+  }
+#navbar {
+  padding: 1rem 1.5rem;
+}
+
+#header {
+  background: none;
+}
+
+#header #navbar ul li a:before, #header #navbar ul li a:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: #fff;
+            visibility: hidden;
+            -webkit-transform: scaleX(0);
+            -moz-transform: scaleX(0);
+            -ms-transform: scaleX(0);
+            -o-transform: scaleX(0);
+            transform: scaleX(0);
+            -webkit-transition: all 0.2s ease;
+            -moz-transition: all 0.2s ease;
+            transition: all 0.2s ease; }
+          #header #navbar ul li a:hover:before {
+            visibility: visible;
+            -webkit-transform: scaleX(0.75);
+            -moz-transform: scaleX(0.75);
+            -ms-transform: scaleX(0.75);
+            -o-transform: scaleX(0.75);
+            transform: scaleX(0.75); }
+          #header #navbar ul li a.active:after {
+            top: 0;
+            visibility: visible;
+            -webkit-transform: scaleX(0.75);
+            -moz-transform: scaleX(0.75);
+            -ms-transform: scaleX(0.75);
+            -o-transform: scaleX(0.75);
+            transform: scaleX(0.75); }
+        #header #navbar ul li.active a:after {
+          top: 0;
+          visibility: visible;
+          -webkit-transform: scaleX(0.75);
+          -moz-transform: scaleX(0.75);
+          -ms-transform: scaleX(0.75);
+          -o-transform: scaleX(0.75);
+          transform: scaleX(0.75); }
+
+#header.scrolled{height:3rem;background-color:rgba(255,255,255,.9) !important;box-shadow:0 .05rem 1rem rgba(0,0,0,.15) !important}#header.scrolled #logo h3{color:#596364 !important;font-size:1.6rem !important}#header.scrolled #logo a{color:#596364 !important}#header.scrolled #navbar a,#header.scrolled #navbar .menu-btn{color:#3498db !important}#header.scrolled #navbar a:before,#header.scrolled #navbar a:after{background-color:#3498db !important}
+
+.scrolled {
+
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  color: #fff;
+  background: none;
+}
+
+.nav > li > a:hover {
+  background: none;
+}
+
+.form-control {
+    border: none;
+    box-shadow: none;
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+.form-item {
+  top: 0;
+  left: 0;
+  background: #fcfcfc;
+  font-weight: 300;
+  color: #333;
+  z-index: 1;
+  :hover {
+    background-color: #ECF0F1;
+  }
+  :focus {
+    outline: none;
+  }
+}
+
+input:hover {
+    background-color: #ECF0F1;
+  }
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
