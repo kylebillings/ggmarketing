@@ -6,23 +6,43 @@
 	background: -o-linear-gradient(-45deg, #591296 0%,#42075c 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(-45deg, #591296 0%,#42075c 100%); /* IE10+ */
 	background: linear-gradient(135deg, #591296 0%,#42075c 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#591296', endColorstr='#42075c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#591296', endColorstr='#42075c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background: url("../images/lowpoly.png");
 	background-size: 100%;
-	padding-top: 12%;
+	padding-top: 11%;
 	padding-bottom: 10%;
 	color: #fff;
 
+	> .container-fluid {
+		position: relative;
+		z-index: 20;
+	}
+
 	h1 {
-		font-size: 120px;
+		font-size: 80px;
 		font-weight: 100;
+		z-index: 10;
 	}
 
 	h3 {
 		font-weight: 300;
+		z-index: 10;
 	}
 }
-
+#logo-rotate {
+	    position:absolute;
+	    left:0;
+	    right: 0;
+	    margin-left:auto;
+	    margin-right:auto;
+	    z-index: 0;
+	    top: 30px;
+	    width: 70%;
+	    opacity: .05;
+		}
 .email-field {
+	position: relative;
+	z-index: 10;
 	width: 100%;
 	background-color: #f6f6f6;
 	padding: 15px;
@@ -30,6 +50,17 @@
 	input[type="email"] {
 		width: 100%;
 	}
+}
+
+#science, #privacy, #examples, #faq {
+	background-color: #fff;
+	position: relative;
+	z-index: 10;
+	padding-top:53px;
+}
+
+#privacy {
+	background-color: #f6f6f6;
 }
 
 //#42075C, #250A30, #FCFCFC

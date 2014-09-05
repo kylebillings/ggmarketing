@@ -6,12 +6,20 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
 
 @import "marketing.scss";
+ 
+@import "animate.scss";
 
 body {
   font-family: "Lato", "Helvetica Neue", "Helvetica", "Arial", Sans Serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+p {
+  font-size: 18px;
   font-weight: 300;
 }
 
@@ -64,7 +72,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // Bootstrap Overwrites
-.container-fluid {
+.btn-primary {
+  background-color: #50E3C2;
+  border: none;
+  :hover {
+    background-color: darken(#50E3C2, 10%);
+  }
 }
 
 .nav {
@@ -74,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
   > li {
 
     > a {
-      padding-right: 16px;
+      padding: 5px 15px 5px 15px;
       color: #fff;
       font-size: 14px;
       font-weight: 300;
@@ -86,7 +99,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header {
+  z-index: 100;
   background: none;
+  h3 {
+    display: none;
+    margin: 0px;
+    :hover {
+      text-decoration: none;
+    }
+  }
 }
 
 #header #navbar ul li a:before, #header #navbar ul li a:after {
@@ -130,10 +151,21 @@ h1, h2, h3, h4, h5, h6 {
           -o-transform: scaleX(0.75);
           transform: scaleX(0.75); }
 
-#header.scrolled{height:3rem;background-color:rgba(255,255,255,.9) !important;box-shadow:0 .05rem 1rem rgba(0,0,0,.15) !important}#header.scrolled #logo h3{color:#596364 !important;font-size:1.6rem !important}#header.scrolled #logo a{color:#596364 !important}#header.scrolled #navbar a,#header.scrolled #navbar .menu-btn{color:#3498db !important}#header.scrolled #navbar a:before,#header.scrolled #navbar a:after{background-color:#3498db !important}
-
-.scrolled {
-
+.dark-header {
+  background-color: rgba(255,255,255,.9) !important;
+  border-bottom: 1px solid #f6f6f6;
+  box-shadow: 0 .05rem 1rem rgba(0,0,0,.15);
+  a {
+    color: #591296 !important;
+    :hover {
+      text-decoration: none;
+    }
+  }
+  a:before, a:after{background-color:#591296 !important}
+  h3 {
+    display: inline !important;
+    color: #591296 !important;
+  }
 }
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
@@ -192,4 +224,8 @@ input:hover {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+.footer {
+  background-color: #333;
 }
