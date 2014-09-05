@@ -1,6 +1,6 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
@@ -110,6 +110,71 @@ p {
   }
 }
 
+/*
+this would be a proposed better structure for something like this:
+*/
+
+@mixin transform($type) {
+  -webkit-transform: $type;
+  -moz-transform: $type;
+  -ms-transform: $type;
+  -o-transform: $type;
+  transform: $type;
+}
+
+@mixin transition($type) {
+  -webkit-transition: $type;
+  -moz-transition: $type;
+  transition: $type;
+}
+
+#header {
+  #navbar {
+    ul {
+      li {
+        a {
+          &:before, &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: #fff;
+            visibility: hidden;
+            @include transform(scaleX(0));
+            @include transition(all 0.2s ease);
+          }
+          &:hover {
+            &:before {
+              visibility: visible;
+              @include transform(scaleX(0.75));
+            }
+          }
+          &.active {
+            &:before {}
+            &:after {
+              top: 0;
+              visibility: visible;
+              @include transform(scaleX(0.75));
+            }
+          }
+        }
+        &.active {
+          a {
+            &:after {
+              top: 0;
+              visibility: visible;
+              @include transform(scaleX(0.75));
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
 #header #navbar ul li a:before, #header #navbar ul li a:after {
             content: "";
             position: absolute;
@@ -150,7 +215,7 @@ p {
           -ms-transform: scaleX(0.75);
           -o-transform: scaleX(0.75);
           transform: scaleX(0.75); }
-
+*/
 .dark-header {
   background-color: rgba(255,255,255,.9) !important;
   border-bottom: 1px solid #f6f6f6;
