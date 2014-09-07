@@ -45,7 +45,13 @@
 	z-index: 10;
 	width: 100%;
 	background-color: #f6f6f6;
-	padding: 15px;
+	padding: 25px;
+	.btn-primary {
+		border: none;
+	}
+	.col-sm-6 {
+		float: none;
+	}
 
 	input[type="email"] {
 		width: 100%;
@@ -59,8 +65,40 @@
 	padding-top:53px;
 }
 
+#examples {
+	padding-bottom: 50px;
+}
+
 #privacy {
 	background-color: #f6f6f6;
+}
+
+#faq {
+	.panel-heading {
+		padding: 0px;
+		:hover {
+			background-color: #f9f9f9;
+		}
+		.panel-title > a {
+			display: block;
+			padding: 15px;
+			border-radius: 4px;
+			:hover {
+				border-radius: 4px;;
+				text-decoration: none;
+			}
+		}
+		a:hover {
+			text-decoration: none;
+			border-style: 4px;
+		}
+	}
+	.panel {
+		border: none;
+	}
+	blockquote {
+		font-weight: 300;
+	}
 }
 
 //#42075C, #250A30, #FCFCFC

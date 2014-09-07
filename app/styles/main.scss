@@ -9,6 +9,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
  
 @import "animate.scss";
 
+@import "animate.css";
+
 body {
   font-family: "Lato", "Helvetica Neue", "Helvetica", "Arial", Sans Serif;
 }
@@ -97,20 +99,35 @@ p {
 #navbar {
   padding: 1rem 1.5rem;
 }
+@mixin transform($type) {
+  -webkit-transform: $type;
+  -moz-transform: $type;
+  -ms-transform: $type;
+  -o-transform: $type;
+  transform: $type;
+}
+
+@mixin transition($type) {
+  -webkit-transition: $type;
+  -moz-transition: $type;
+  transition: $type;
+}
 
 #header {
   z-index: 100;
   background: none;
   h3 {
     display: none;
-    margin: 0px;
+    margin:0px;
     :hover {
       text-decoration: none;
     }
   }
-}
-
-#header #navbar ul li a:before, #header #navbar ul li a:after {
+  #navbar {
+    ul {
+      li {
+        a {
+          &:before, &:after {
             content: "";
             position: absolute;
             width: 100%;
@@ -119,37 +136,37 @@ p {
             left: 0;
             background-color: #fff;
             visibility: hidden;
-            -webkit-transform: scaleX(0);
-            -moz-transform: scaleX(0);
-            -ms-transform: scaleX(0);
-            -o-transform: scaleX(0);
-            transform: scaleX(0);
-            -webkit-transition: all 0.2s ease;
-            -moz-transition: all 0.2s ease;
-            transition: all 0.2s ease; }
-          #header #navbar ul li a:hover:before {
-            visibility: visible;
-            -webkit-transform: scaleX(0.75);
-            -moz-transform: scaleX(0.75);
-            -ms-transform: scaleX(0.75);
-            -o-transform: scaleX(0.75);
-            transform: scaleX(0.75); }
-          #header #navbar ul li a.active:after {
-            top: 0;
-            visibility: visible;
-            -webkit-transform: scaleX(0.75);
-            -moz-transform: scaleX(0.75);
-            -ms-transform: scaleX(0.75);
-            -o-transform: scaleX(0.75);
-            transform: scaleX(0.75); }
-        #header #navbar ul li.active a:after {
-          top: 0;
-          visibility: visible;
-          -webkit-transform: scaleX(0.75);
-          -moz-transform: scaleX(0.75);
-          -ms-transform: scaleX(0.75);
-          -o-transform: scaleX(0.75);
-          transform: scaleX(0.75); }
+            @include transform(scaleX(0));
+            @include transition(all 0.2s ease);
+          }
+          &:hover {
+            &:before {
+              visibility: visible;
+              @include transform(scaleX(0.75));
+            }
+          }
+          &.active {
+            &:before {}
+            &:after {
+              top: 0;
+              visibility: visible;
+              @include transform(scaleX(0.75));
+            }
+          }
+        }
+        &.active {
+          a {
+            &:after {
+              top: 0;
+              visibility: visible;
+              @include transform(scaleX(0.75));
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 .dark-header {
   background-color: rgba(255,255,255,.9) !important;
@@ -158,7 +175,7 @@ p {
   a {
     color: #591296 !important;
     :hover {
-      text-decoration: none;
+      text-decoration: none !important;
     }
   }
   a:before, a:after{background-color:#591296 !important}
@@ -180,7 +197,6 @@ p {
 .form-control {
     border: none;
     box-shadow: none;
-    font-size: 18px;
     font-weight: 300;
   }
 
@@ -229,3 +245,36 @@ input:hover {
 .footer {
   background-color: #333;
 }
+
+// Legal
+#legal {
+  #header {
+    background-color: #591296;
+  }
+  .container {
+    padding-top: 60px;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+
+/*==============================================
+FOOTER
+==============================================*/
+.footer {
+  background: #222;
+  color: white;
+  padding: 40px; }
+  .footer .footer-text {
+    text-align: center;
+    font-size: 1em; }
+    .footer .footer-text a {
+      color: #efefef;}
+      .footer .footer-text a:hover {
+        text-decoration: none;
+        color: #777; }
+    .footer .footer-text span {
+      padding: 0 10px; }
+  .footer p {
+    margin-bottom: 0; }

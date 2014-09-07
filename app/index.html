@@ -22,10 +22,10 @@
         <div id="navbar">
           <ul class="nav nav-pills pull-right">
             <!--<li class="active"><a ng-href="#">Home</a></li>-->
-            <li><a ng-href="#science">Science</a></li>
-            <li><a ng-href="#examples">Examples</a></li>
-            <li><a ng-href="#privacy">Privacy</a></li>
-            <li><a ng-href="#faq">FAQ</a></li>
+            <li><a data-scroll href="#science">Science</a></li>
+            <li><a data-scroll href="#examples">Examples</a></li>
+            <li><a data-scroll href="#privacy">Privacy</a></li>
+            <li><a data-scroll href="#faq">FAQ</a></li>
             
           </ul>
           <a ng-href="#"><h3>Gene Guru</h3></a>
@@ -37,16 +37,18 @@
         <h3>Diet plans based on your genetic information</h3><br/>
 
         <div>
-          <form name="userForm" ng-submit="submitForm()" novalidate>
             <!-- EMAIL -->
-            <div class="col-sm-5 col-sm-offset-2 form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
-                <input placeholder="Enter Your Email Address" type="email" name="email" class="form-control text-center" ng-model="user.email">
-                <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">ex: kyle@gmail.com</p>
-            </div>
-            <div class="col-sm-3">
-              <button type="submit" class="btn btn-primary btn-block" ng-disabled="userForm.$invalid">Continue</button>
-            </div>
-          </form>
+            <div class="col-sm-8 col-sm-offset-2">
+              <form name="userForm" ng-submit="submitForm()" novalidate>
+                <div class="input-group input-group-lg">
+                  <input placeholder="Enter Your Email Address" type="email" name="email" class="form-control" ng-model="user.email">
+                  <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">ex: kyle@gmail.com</p>
+                  <span class="input-group-btn">
+                  <button class="btn btn-primary" type="submit" class="btn btn-primary btn-block" ng-disabled="userForm.$invalid">Continue</button>
+                  </span>
+                </div><!-- /input-group -->
+                </form>
+            </div><!-- /.col-lg-6 -->     
         </div>
       </div>
     </section>
@@ -58,16 +60,11 @@
       </div>-->
 
 <section id="science">
-  <div id="logo-rotate">
+  <!--<div id="logo-rotate">
     <img src="images/logo.svg" alt="">
-  </div>
+  </div>-->
   <div class="container text-center">
     <h1>The Science</h1>
-    <!-- <div>
-        <svg width="250" height="250">   
-          <svg class="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" enable-background="new 0 0 800 800"><path class="animated svg-line-sm-1" stroke="#999" stroke-width="5" stroke-miterlimit="10" fill="none" d="M340 63l392.5 258.5"/><path class="animated svg-line-sm-2" stroke="#999" stroke-width="5" stroke-miterlimit="10" fill="none" d="M294.2 171.2l-63.7 142.3"/><path class="animated svg-line-sm-3" stroke="#999" stroke-width="5" stroke-miterlimit="10" fill="none" d="M230.5 313.5l541 90"/><path class="animated svg-line-sm-4" stroke="#999" stroke-width="5" stroke-miterlimit="10" fill="none" d="M294.2 172.5l477.3 231"/><path class="animated svg-line-sm-5" stroke="#999" stroke-width="5" stroke-miterlimit="10" fill="none" d="M771.5 403.5L464 661"/><path class="animated svg-line-sm-6" stroke="#999" stroke-width="5" stroke-miterlimit="10" fill="none" d="M585.2 399L363 563.5"/><path class="animated svg-line-sm-7" stroke="#999" stroke-width="5" stroke-miterlimit="10" fill="none" d="M413 172.5L284 261"/><path class="animated svg-line-sm-8" stroke="#999" stroke-width="5" stroke-miterlimit="10" fill="none" d="M546.5 261.5L549 653"/><path class="animated svg-line-sm-9" stroke="#999" stroke-width="5" stroke-miterlimit="10" fill="none" d="M251.5 369.5l111.5 194"/><path class="animated svg-line-md-1" stroke="#555" stroke-width="7" stroke-miterlimit="10" fill="none" d="M363 305.7L217.5 540.5"/><path class="animated svg-line-md-2" stroke="#555" stroke-width="7" stroke-miterlimit="10" fill="none" d="M77.5 188.5l334 516"/><path class="animated svg-line-md-3" stroke="#555" stroke-width="7" stroke-miterlimit="10" fill="none" d="M441.5 449.5l-224 91"/><path class="animated svg-line-md-4" stroke="#555" stroke-width="7" stroke-miterlimit="10" fill="none" d="M28.5 468.5l49-280"/><path class="animated svg-line-md-5" stroke="#555" stroke-width="7" stroke-miterlimit="10" fill="none" d="M411.5 704.5l-383-236"/><path class="animated svg-line-md-6" stroke="#555" stroke-width="7" stroke-miterlimit="10" fill="none" d="M361.5 305.7l80 143.8"/><path class="animated svg-line-md-7" stroke="#555" stroke-width="7" stroke-miterlimit="10" fill="none" d="M673.7 413l-232.2 36.5"/><path class="animated svg-line-lg-1" stroke="#000" stroke-width="9" stroke-miterlimit="10" fill="none" d="M234 205l-72 170"/><path class="animated svg-line-lg-2" stroke="#000" stroke-width="9" stroke-miterlimit="10" fill="none" d="M234 647l250-427"/><path class="animated svg-line-lg-3" stroke="#000" stroke-width="9" stroke-miterlimit="10" fill="none" d="M634 447L484 585"/><path class="animated svg-line-lg-4" stroke="#000" stroke-width="9" stroke-miterlimit="10" fill="none" d="M634 447L234 647"/><path class="animated svg-line-lg-5" stroke="#000" stroke-width="9" stroke-miterlimit="10" fill="none" d="M484 585l-250 62"/><path class="animated svg-line-lg-6" stroke="#000" stroke-width="9" stroke-miterlimit="10" fill="none" d="M334 423L234 205"/><path class="animated svg-line-lg-7" stroke="#000" stroke-width="9" stroke-miterlimit="10" fill="none" d="M484 220v365"/><circle stroke-width="3" class="animated infinite svg-target-point-1 flash" stroke="#777" stroke-miterlimit="10" cx="413.2" cy="172.2" r="19" fill="none"/><circle stroke-width="3" class="animated infinite svg-target-point-2 flash" stroke="#777" stroke-miterlimit="10" cx="251.2" cy="369.2" r="19" fill="none"/><circle stroke-width="3" class="animated infinite svg-target-point-3 flash" stroke="#777" stroke-miterlimit="10" cx="585.2" cy="399" r="19" fill="none"/><circle stroke-width="3" class="animated infinite svg-target-point-4 flash" stroke="#777" stroke-miterlimit="10" cx="464.2" cy="661.2" r="19" fill="none"/><circle stroke-width="3" class="animated infinite svg-target-point-5 flash" stroke="#555" stroke-miterlimit="10" cx="217.5" cy="540.5" r="19" fill="none"/><circle class="animated svg-data-point-lg-1" cx="234.5" cy="205.2" r="12.5"/><circle class="animated svg-data-point-lg-2" cx="161.5" cy="375.2" r="12.5"/><circle class="animated svg-data-point-lg-3" cx="483.5" cy="220.2" r="12.5"/><circle class="animated svg-data-point-lg-4" cx="484.5" cy="585.2" r="12.5"/><circle class="animated svg-data-point-lg-5" cx="634.5" cy="447.2" r="12.5"/><circle class="animated svg-data-point-lg-6" cx="234.5" cy="647.2" r="12.5"/><circle class="animated svg-data-point-lg-7" cx="334.5" cy="423.2" r="12.5"/><circle class="animated svg-data-point-md-1" fill="#555" cx="441.7" cy="449" r="10"/><circle class="animated svg-data-point-md-2" fill="#555" cx="673.7" cy="413" r="10"/><circle class="animated svg-data-point-md-3" fill="#555" cx="363" cy="305.7" r="10"/><circle class="animated svg-data-point-md-4" fill="#555" cx="77.7" cy="188" r="10"/><circle class="animated svg-data-point-md-5" fill="#555" cx="411.7" cy="704" r="10"/><circle class="animated svg-data-point-md-6" fill="#555" cx="28.7" cy="468" r="10"/><circle class="animated svg-data-point-md-7" fill="#555" cx="217.7" cy="540" r="10"/><circle fill="#999" class="animated svg-data-point-sm-1" cx="294.2" cy="171.2" r="7.5"/><circle fill="#999" class="animated svg-data-point-sm-2" cx="284.2" cy="261.2" r="7.5"/><circle fill="#999" class="animated svg-data-point-sm-3" cx="413.2" cy="172.2" r="7.5"/><circle fill="#999" class="animated svg-data-point-sm-4" cx="340.2" cy="63.2" r="7.5"/><circle fill="#999" class="animated svg-data-point-sm-5" cx="732.2" cy="321.2" r="7.5"/><circle fill="#999" class="animated svg-data-point-sm-6" cx="771.2" cy="403.2" r="7.5"/><circle fill="#999" class="animated svg-data-point-sm-7" cx="464.2" cy="661.2" r="7.5"/><circle fill="#999" class="animated svg-data-point-sm-8" cx="549.2" cy="653.2" r="7.5"/><circle fill="#999" class="animated svg-data-point-sm-9" cx="546.2" cy="261.2" r="7.5"/><circle fill="#999" class="animated svg-data-point-sm-10" cx="363.2" cy="563.2" r="7.5"/><circle fill="#999" class="animated svg-data-point-sm-11" cx="585.2" cy="399.2" r="7.5"/><circle fill="#999" class="animated svg-data-point-sm-12" cx="230.2" cy="313.2" r="7.5"/><circle fill="#999" class="animated svg-data-point-sm-13" cx="251.2" cy="369.2" r="7.5"/><circle class="animated svg-main-circle" stroke="#000" stroke-width="14" stroke-miterlimit="10" cx="390" cy="430" r="308" fill="none"/></svg>
-        </svg>
-      </div> -->
     <h3>Your body develops and functions according to the interactions between proteins. By understanding the intricacies of one's DNA, one can optimize for certain lifestyle objectives.</h3>
   </div>
   <div class="container-fluid">
@@ -90,26 +87,30 @@
   <br>
 </section>
     <div class="email-field text-center">
-      <div class="container">
-        <div class="col-sm-8">
-          <input class="form-control form-item" type="email" placeholder="Enter Your Email Address">
-        </div>
-        <div class="col-sm-4">
-          <input class="btn btn-primary tn-block" type="submit" value="Access Your DNA Based Diet">
-        </div>
-      </div>
+            <!-- EMAIL -->
+            <div class="col-sm-6 col-sm-offset-3">
+              <form name="userForm" ng-submit="submitForm()" novalidate>
+                <div class="input-group input-group-lg wow fadeIn" data-wow-duration="1s">
+                  <input placeholder="Enter Your Email Address" type="email" name="email" class="form-control" ng-model="user.email">
+                  <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">ex: kyle@gmail.com</p>
+                  <span class="input-group-btn">
+                  <button class="btn btn-primary" type="submit" class="btn btn-primary btn-block" ng-disabled="userForm.$invalid">Continue</button>
+                  </span>
+                </div><!-- /input-group -->
+                </form>
+            </div><!-- /.col-lg-6 -->     
     </div>
 <section id="examples">
   <div class="container-fluid text-center">
     <h1>Examples</h1>
     <div class="col-sm-6">
       <h3>Meet Ashwin</h3>
-      <div style="margin: 0 auto; background-color: purple;height: 200px; width: 200px; border-radius: 200px;"></div>
+      <div class="wow fadeIn" data-wow-duration="1s" style="margin: 0 auto; background-color: purple;height: 200px; width: 200px; border-radius: 200px;"></div>
       <h4>Our CEO</h4>
     </div>
     <div class="col-sm-6">
       <h3>Meet Nus</h3>
-      <div style="margin: 0 auto; background-color: purple;height: 200px; width: 200px; border-radius: 200px;"></div>
+      <div class="wow fadeIn" data-wow-duration="1s" style="margin: 0 auto; background-color: purple;height: 200px; width: 200px; border-radius: 200px;"></div>
       <h4>Our CFO</h4>
     </div>
     <div class="col-sm-8 col-sm-offset-2">
@@ -163,7 +164,7 @@
 </section>
 <section id="privacy">
   <div class="container">
-    <h1>Privacy</h1>
+    <h1><span class="glyphicon glyphicon-lock"></span> Privacy</h1>
     <p><strong>Your genetic profile is your most personal information, and we will always 
 keep that information safe and secure in the following ways: </strong></p>
 
@@ -184,16 +185,20 @@ keep that information safe and secure in the following ways: </strong></p>
     </div>
     <br>
 </section>
-    <div class="email-field text-center">
-      <div class="container">
-        <div class="col-sm-8">
-          <input class="form-control form-item" type="email" placeholder="Enter Your Email Address">
-        </div>
-        <div class="col-sm-4">
-          <input class="btn btn-primary tn-block" type="submit" value="Access Your DNA Based Diet">
-        </div>
-      </div>
-    </div>
+<div class="email-field text-center">
+            <!-- EMAIL -->
+            <div class="col-sm-6 col-sm-offset-3">
+              <form name="userForm" ng-submit="submitForm()" novalidate>
+                <div class="input-group input-group-lg wow fadeIn" data-wow-duration="1s">
+                  <input placeholder="Enter Your Email Address" type="email" name="email" class="form-control" ng-model="user.email">
+                  <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">ex: kyle@gmail.com</p>
+                  <span class="input-group-btn">
+                  <button class="btn btn-primary" type="submit" class="btn btn-primary btn-block" ng-disabled="userForm.$invalid">Continue</button>
+                  </span>
+                </div><!-- /input-group -->
+                </form>
+            </div><!-- /.col-lg-6 -->     
+    </div> <!-- email-field -->
 <section id="faq">
         <div class="container">
           <h1>Frequently Asked Questions</h1>
@@ -340,30 +345,29 @@ keep that information safe and secure in the following ways: </strong></p>
 </section>
 
 
+<div class="email-field text-center">
+            <!-- EMAIL -->
+            <div class="col-sm-6 col-sm-offset-3">
+              <form name="userForm" ng-submit="submitForm()" novalidate>
+                <div class="input-group input-group-lg wow fadeIn" data-wow-duration="1s">
+                  <input placeholder="Enter Your Email Address" type="email" name="email" class="form-control" ng-model="user.email">
+                  <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">ex: kyle@gmail.com</p>
+                  <span class="input-group-btn">
+                  <button class="btn btn-primary" type="submit" class="btn btn-primary btn-block" ng-disabled="userForm.$invalid">Continue</button>
+                  </span>
+                </div><!-- /input-group -->
+                </form>
+            </div><!-- /.col-lg-6 -->     
+    </div> <!-- email-field -->
 
-    <div class="email-field text-center">
-      <div class="container">
-        <div class="col-sm-8">
-          <input class="form-control form-item" type="email" placeholder="Enter Your Email Address">
-        </div>
-        <div class="col-sm-4">
-          <input class="btn btn-primary tn-block" type="submit" value="Access Your DNA Based Diet">
-        </div>
-      </div>
-    </div>
-    <div class="footer">
-      <div class="container">
-        <div class="col-sm-4">
-          Contact Us
-        </div>
-        <div class="col-sm-4">
-          Complain
-        </div>
-        <div class="col-sm-4">
-          Do Something Else
-        </div>
-      </div>
-    </div>
+<footer class="footer">
+  <p class="footer-text">
+    &#169; 2014 Gene Guru, Inc <span> | </span>
+    <a href="/legal.html">legal</a> <span> | </span>
+    <a href="/forum">forum</a> <span> | </span>
+    <a href="mailto:hello@geneguru.me">hello@geneguru.me</a>
+  </p>
+</footer>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -388,6 +392,8 @@ keep that information safe and secure in the following ways: </strong></p>
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="scripts/wow.min.js"></script>
+    <script src="scripts/smooth-scroll.min.js"></script>
     <script src="bower_components/json3/lib/json3.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
@@ -436,6 +442,12 @@ window.setInterval(function() {
     deg += .1;
     $("#logo-rotate").css('-webkit-transform','rotate(' + deg + 'deg)');
 }, 50);
+</script>
+<script>
+    smoothScroll.init();
+</script>
+<script>
+ new WOW().init();
 </script>
 
 </body>
