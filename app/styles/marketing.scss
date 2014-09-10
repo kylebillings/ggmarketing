@@ -38,7 +38,7 @@
 	    z-index: 0;
 	    top: 30px;
 	    width: 50%;
-	    opacity: .05;
+	    opacity: .1;
 		}
 
 #collector {
@@ -84,6 +84,11 @@
 	z-index: 10;
 	padding-top:53px;
 	padding-bottom: 53px;
+}
+
+#science {
+	background-color: #591296;
+	color: #fff;
 }
 
 #examples {
