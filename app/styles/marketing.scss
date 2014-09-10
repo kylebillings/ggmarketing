@@ -45,7 +45,7 @@
 	//top: 50%;
 	top: 30px;
 	width: 50%;
-	opacity: .05;
+	opacity: .1;
 	img {
 	//	@include animation('rotate-helix 100s infinite');
 	}
@@ -98,6 +98,7 @@
 
 #examples {
 	background: #fafafa;
+	background-size: 100%;
 	padding-bottom: 0;
 	.card {
 		padding: 100px 0;
@@ -118,18 +119,12 @@
 	}
 }
 
-
 $purple: #5C388A;
 #science {
   background: $purple;
   color: #FFF;
   padding: 100px 0;
 }
-
-
-
-
-
 #product {
 	.img-responsive {
 		height: 200px;
