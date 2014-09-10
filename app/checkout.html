@@ -1,0 +1,328 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Gene Guru | Checkout</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="marketingSiteApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+      
+<main id="content" role="main">
+    <div class="header dark-header" id="header">
+        <div id="navbar">
+          <ul class="nav nav-pills pull-right">
+            <!--<li class="active"><a ng-href="#">Home</a></li>-->
+            <li><a class="dark-pill" href="index.html">Home Page</a></li>
+          </ul>
+          <a ng-href="#"><h3>Gene Guru</h3></a>
+        </div>
+      </div>
+                <section id="flow">
+                    <div class="cd-container white-bg text-center">
+                        <div id="data" class="padding">
+                            <h1>Do you have your data?</h1><br/>
+                            <img src="images/logo.svg" alt="" class="icon">
+                            <div class="text-center">
+                                <h4>Gene Guru reads through genomic data to generate scientifically ideal diets.</h4>
+                                <h4>If you already have your DNA, we can analyze it right away. If not, we will send you an easy to use self-test kit. Just collect a saliva sample with the included swabs and send it along for analysis in the pre-addressed envelope.</h4><br/>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4 col-sm-offset-2">
+                                    <input id="btn-23" type="button" value="I have my DNA" class="btn btn-lg btn-block">
+                                </div>
+                                <div class="col-sm-4">
+                                    <input id="btn-kit" type="button" value="I Need a Testing Kit" class="btn btn-lg btn-block">
+                                </div>
+                            </div>
+                        </div> <!-- #data -->
+                        <div id="box-shipping">
+                            <h1>We'll send you one on October 1st.</h1>
+                            <div class="row">
+                                <div class="col-xs-6 col-xs-offset-3">
+                                    <img class="img-responsive" src="images/gg-two-boxes.jpg" alt="Boxes">
+                                </div>
+                            </div><br/> <!-- Box image -->
+                            <h2>Enter your shipping address</h2>
+                            <form action="">
+                                <div class="form-group">
+                                    <div class="padding">
+                                        <label class="email-label" for="email">Full Name</label>
+                                        <input type="text" class="form-control email-form form-item" name="name" placeholder="First and last name">
+                                        <label class="email-label" for="email">Address</label>
+                                        <input type="text" class="form-control email-form form-item" name="address 1" placeholder="Address Line 1">
+                                        <input type="text" class="form-control email-form form-item" name="address 2" placeholder="Address Line 2">
+                                        <label class="email-label" for="email">City</label>
+                                        <input type="text" class="form-control email-form form-item" name="city" placeholder="San Francisco">
+                                        <label class="email-label" for="email">State</label>
+                                        <input type="text" class="form-control email-form form-item" name="state" placeholder="California">
+                                        <label class="email-label" for="email">Zip</label>
+                                        <input type="text" class="form-control email-form form-item" name="zip" placeholder="94115">
+                                        <input type="submit" id="submit-1" class="cd-submit" value="Submit">
+                                        <div class="text-center"><br>
+                                            <a href="checkout.html">If you already have data, click here to start over.</a>
+                                        </div>
+                                    </div> <!-- Padding -->
+                                </div>
+                            </form>
+                        </div> <!-- Shipping -->
+                        <div id="payment-kit">
+                            <h1>$189</h1>
+                            <h4>One testing kit (shipping October 1), and lifetime access to your new DNA-based lifestyle.</h4>
+                            <!--<div class="row">
+                                <div class="col-xs-6 col-xs-offset-3">
+                                    <img class="img-responsive" src="images/gg-two-boxes.jpg" alt="Boxes">
+                                </div>
+                            </div><br/>--> <!-- Box image -->
+                            <form action="">
+                                <div class="form-group">
+                                    <div class="padding">
+                                        <div class="col-lg-12">
+                                            <label>Card Holder Name</label>
+                                            <input type="text" class="form-control" name="card_holder" style="width:100%;" placeholder="First Last">
+                                        </div>
+                                        <div class="col-sm-5 form-group">
+                                            <label>Card Number</label>
+                                            <input type="text" class="form-control" data-encrypted-attribute="card_number" style="width:100%;" placeholder="4111111111111111">
+                                         </div>
+                                        <div class="col-sm-3 col-xs-6 form-group third float-left">
+                                            <label>CVV</label>
+                                            <input type="text" class="form-control" data-encrypted-attribute="card_cvv" style="width:90%;" placeholder="000">
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 form-group third float-left">
+                                            <label>EXP Year</label>
+                                            <input type="text" name="expYY" class="form-control" maxlength="2" style="width:90%;" placeholder="15">
+                                        </div>
+                                        <input onclick="#" type="submit" id="submit-1" class="cd-submit" value="Finish">
+                                    </div> <br/><!-- Padding -->
+                                </div>
+                            </form>
+                        </div> <!-- box-payment -->
+                        <div id="payment-23">
+                            <h1>Great! We can analyze it right now.</h1><br/>
+                            <img src="images/logo.svg" alt="" class="icon">
+                            <h1>$89</h1>
+                            <h4>Analyze your DNA <strong>now</strong> and gain lifetime access to your new DNA-based lifestyle.</h4>
+                            <!--<div class="row">
+                                <div class="col-xs-6 col-xs-offset-3">
+                                    <img class="img-responsive" src="images/gg-two-boxes.jpg" alt="Boxes">
+                                </div>
+                            </div><br/>--> <!-- Box image -->
+                            <form action="">
+                                <div class="form-group">
+                                    <div class="padding">
+                                        <div class="col-lg-12">
+                                            <label>Card Holder Name</label>
+                                            <input type="text" class="form-control" name="card_holder" style="width:100%;" placeholder="First Last">
+                                        </div>
+                                        <div class="col-sm-5 form-group">
+                                            <label>Card Number</label>
+                                            <input type="text" class="form-control" data-encrypted-attribute="card_number" style="width:100%;" placeholder="4111111111111111">
+                                         </div>
+                                        <div class="col-sm-3 col-xs-6 form-group third float-left">
+                                            <label>CVV</label>
+                                            <input type="text" class="form-control" data-encrypted-attribute="card_cvv" style="width:90%;" placeholder="000">
+                                        </div>
+                                        <div class="col-sm-2 col-xs-3 form-group third float-left">
+                                            <label>EXP Year</label>
+                                            <input type="text" name="expYY" class="form-control" maxlength="2" style="width:90%;" placeholder="15">
+                                        </div>
+                                        <input type="submit" id="submit-2" class="cd-submit" value="Continue">
+                                        <div class="text-center"><br>
+                                            <a href="checkout.html">If you don't have data, click here to start over.</a>
+                                        </div>
+                                    </div> <br/><!-- Padding -->
+                                </div>
+                            </form>
+                        </div> <!-- box-payment -->
+                        <div id="account-info">
+                            <div class="padding">
+                            <img src="images/logo.svg" alt="" class="icon">
+                            <h1>Create Your Gene Guru Account</h1>                            
+                            <form action="">
+                                <div class="form-group">
+                                    <label class="email-label" for="email">Name</label>
+                                    <input type="text" class="form-control email-form form-item" name="first" placeholder="First name">
+                                    <input type="text" class="form-control email-form form-item" name="last" placeholder="Last name">
+                                    <label class="email-label" for="email">Email Address</label>
+                                    <input type="email" class="form-control email-form form-item" name="email" placeholder="Enter your email address">
+                                    <label class="email-label" for="email">Password</label>
+                                    <input type="password" class="form-control email-form form-item" name="password" placeholder="Select a password">
+                                    <input type="password" class="form-control email-form form-item" name="password" placeholder="Confirm your password">
+                                    <br/>
+                                    <!-- Optional Information -->
+                                    <div id="more">
+                                        <a id="toggle-optional"><p><span class="glyphicon glyphicon-plus"></span> Click To Submit Optional Information</p></a>
+                                        <div class="optional">
+                                                <label for="day">Date of Birth</label>
+                                                <div id="date2" class="datefield">
+                                                    <input id="day" type="tel" maxlength="2" placeholder="DD"/> /
+                                                    <input id="month" type="tel" maxlength="2" placeholder="MM"/> /
+                                                    <input id="year" type="tel" maxlength="4" placeholder="YYYY" />
+                                                </div>
+                                                <br/>
+                                                <label for="height">Height</label>
+                                                <div id="date2" class="datefield">
+                                                    <input id="feet" type="tel" maxlength="1" placeholder="F"/> '
+                                                    <input id="inches" type="tel" maxlength="2" placeholder="In"/> "
+                                                </div>
+                                                <br/>
+                                                <label for="weight">Approximate Weight</label><br/>
+                                                <input type="number" name="weight" min="1" max="500" value="140">
+                                                <br/>
+                                        </div>
+                                    </div> <!-- End Optional Information -->
+                                    <input type="submit" id="submit" class="cd-submit" value="Continue To Your Dashboard!">
+                                </div> <!-- Padding -->    
+                                </div> <!-- Form Group -->
+                                 
+                                </form>
+                        </div> <!-- Account Info -->
+                    </div> <!-- .cd-container -->
+                </section> <!-- #flow -->
+            </main> <!-- Content -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+    <!-- KISSmetrics tracking snippet -->
+    <script type="text/javascript">var _kmq = _kmq || [];
+    var _kmk = _kmk || '21fe7a0c143a8e20a15e680651fe818822c5fdee';
+    function _kms(u){
+      setTimeout(function(){
+        var d = document, f = d.getElementsByTagName('script')[0],
+        s = d.createElement('script');
+        s.type = 'text/javascript'; s.async = true; s.src = u;
+        f.parentNode.insertBefore(s, f);
+      }, 1);
+    }
+    _kms('//i.kissmetrics.com/i.js');
+    _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+    </script>
+
+
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <!-- endbuild -->
+            <script>
+            $('#toggle-optional').on('click', function (e) {
+                e.preventDefault();
+                $('.optional').toggle(300);
+            });
+            </script>
+            <script>
+            $('#submit-1').on('click', function (e) {
+                e.preventDefault();
+                $(this).addClass( "btn-submitted" );
+                $('#payment-kit').show(300);
+                $("#submit-1").prop('value', 'Submitted');
+                $('html, body').animate({
+                    scrollTop: $("#payment-kit").offset().top
+                    }, 1000);
+            });
+            </script>
+            <script>
+            $('#btn-23').on('click', function (e) {
+                e.preventDefault();
+                $('#btn-kit').prop('disabled', true);
+                $('#payment-23').show(300);
+            });
+            </script>
+            <script>
+            $('#btn-kit').on('click', function (e) {
+                e.preventDefault();
+                $('#btn-23').prop('disabled', true);
+                $('#box-shipping').show(300);
+            });
+            </script>
+            <script>
+            $('#submit-2').on('click', function (e) {
+                e.preventDefault();
+                $(this).addClass( "btn-submitted" );
+                $('#account-info').show(300);
+                $('html, body').animate({
+                    scrollTop: $("#account-info").offset().top
+                    }, 1000);
+            });
+            </script>
+            <script>
+                $("#btn-23").click(function() {
+                    $('html, body').animate({
+                    scrollTop: $("#payment-23").offset().top
+                    }, 1000);
+                });
+            </script>
+            <script>
+                $("#btn-kit").click(function() {
+                    $('html, body').animate({
+                    scrollTop: $("#box-shipping").offset().top
+                    }, 1000);
+                });
+            </script>
+<script>
+//var deg = 0;
+//window.setInterval(function() {
+//    deg += .1;
+//    $("#logo-rotate").css('-webkit-transform','rotate(' + deg + 'deg)');
+//}, 50);
+</script>
+<script>
+    smoothScroll.init();
+</script>
+<script>
+ new WOW().init();
+</script>
+</body>
+</html>

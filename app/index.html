@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Gene Guru | Genetic Nutrition</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -22,29 +22,43 @@
         <div id="navbar">
           <ul class="nav nav-pills pull-right">
             <!--<li class="active"><a ng-href="#">Home</a></li>-->
-            <li><a data-scroll href="#science">Science</a></li>
-            <li><a data-scroll href="#examples">Examples</a></li>
-            <li><a data-scroll href="#privacy">Privacy</a></li>
-            <li><a data-scroll href="#faq">FAQ</a></li>
-            
+            <li><a class="light-pill" data-scroll href="#science">Science</a></li>
+            <li><a class="light-pill" data-scroll href="#examples">Examples</a></li>
+            <li><a class="light-pill" data-scroll href="#privacy">Privacy</a></li>
+            <li><a class="light-pill" data-scroll href="#faq">FAQ</a></li>
+            <li><a class="dark-pill" data-scroll href="#home" onclick="document.getElementById('email-field').focus();">Sign Up</a></li>
           </ul>
           <a ng-href="#"><h3>Gene Guru</h3></a>
         </div>
       </div>
+      <!--<div id="collector" class="collector-closed">
+            <div class="email-field text-center">
+            <div class="col-sm-6 col-sm-offset-3">
+              <form name="userForm" ng-submit="submitForm()" novalidate>
+                <div class="input-group wow fadeIn" data-wow-duration="1s">
+                  <input placeholder="Enter Your Email Address" type="email" name="email" class="form-control" ng-model="user.email">
+                  <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">ex: kyle@gmail.com</p>
+                  <span class="input-group-btn">
+                  <button class="btn btn-primary" type="submit" class="btn btn-primary btn-block" ng-disabled="userForm.$invalid">Go!</button>
+                  </span>
+                </div>
+                </form>
+            </div>-->     
+    </div>
+      </div>
     <section id="home">
       <div class="container text-center">
-        <h1>DNA Based Diets</h1>
-        <h3>Diet plans based on your genetic information</h3><br/>
+        <h1>Gene Guru</h1>
+        <h3>Personalized nutrition based on your genetics</h3><br/>
 
         <div>
             <!-- EMAIL -->
             <div class="col-sm-8 col-sm-offset-2">
               <form name="userForm" ng-submit="submitForm()" novalidate>
                 <div class="input-group input-group-lg">
-                  <input placeholder="Enter Your Email Address" type="email" name="email" class="form-control" ng-model="user.email">
-                  <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">ex: kyle@gmail.com</p>
+                  <input id="email-field" placeholder="Enter Your Email Address" type="email" name="email" class="form-control" ng-model="user.email">
                   <span class="input-group-btn">
-                  <button class="btn btn-primary" type="submit" class="btn btn-primary btn-block" ng-disabled="userForm.$invalid">Continue</button>
+                  <button class="btn btn-primary" type="submit" class="btn btn-primary btn-block" ng-disabled="userForm.$invalid">Go!</button>
                   </span>
                 </div><!-- /input-group -->
                 </form>
@@ -58,63 +72,63 @@
         <div ng-view="main.html"></div>
         <div ng-view="science"></div>
       </div>-->
-
-<section id="science">
-  <!--<div id="logo-rotate">
-    <img src="images/logo.svg" alt="">
-  </div>-->
+<section id="product">
   <div class="container text-center">
-    <h1>The Science</h1>
-    <h3>Your body develops and functions according to the interactions between proteins. By understanding the intricacies of one's DNA, one can optimize for certain lifestyle objectives.</h3>
+    <h1>Gene Guru Offers</h1>
   </div>
-  <div class="container-fluid">
-    <div class="col-sm-4">
-      <h3>Fat Loss</h3>
-      <p>The precise way your body burns, or metabolizes, fats are unique because of your individual genetics. By investigating the functional effectiveness of your genes involved in breakdown, storage and processing of food, we can provide a detailed nutritional and exercise framework for you to shed weight faster than ever before.</p>
+  <div class="container-fluid text-center">
+    <div class="col-sm-5 col-sm-offset-1 wow slideInLeft" data-wow-duration="1s">
+      <h3>DNA Analysis</h3>
+      <img class="img-responsive" src="images/logo-low-poly.png" alt="">
+      <p>If you already have your data analyzed, we can process your DNA right away and deliver a personalized list of recommendations for your particular genetics.</p>
     </div>
-    <div class="col-sm-4">
-      <h3>Toning</h3>
-        <p>Your genes that determine neuromuscular efficiency determine how muscle fibers should be maximally contracted at a given time without risking injury. We analyze the genetic dynamics of these muscular strength-building processes to design a regimen that can make you stronger than ever before.</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Muscle Gain</h3>
-        <p>Your muscles grow when the fibers are damaged and subsequently repaired, growing larger in the process. Numerous genes and proteins mediate and regulate this repair while others digest and process the nutrients your muscles need to grow. By analyzing your specific genetics, we can determine ideal exercise and nutritional strategies for you to rapidly increase muscle mass.</p>
-    </div>
-    <div class="col-sm-6 col-sm-offset-3">
-      <p>Interested in learning more about how Gene Guru works? Please contact us at <a href="#science">example@geneguru.me.</a></p>
+    <div class="col-sm-5 wow slideInRight" data-wow-duration="1s">
+      <h3>DNA Test + Analysis</h3>
+      <img class="img-responsive" src="images/logo+test-low-poly.png" alt="">
+      <p>We will gladly send you a DNA test kit should you need your genetic data analyzed. You will receive the data along with your recommendations.</p>
     </div>
   </div>
   <br>
 </section>
-    <div class="email-field text-center">
-            <!-- EMAIL -->
-            <div class="col-sm-6 col-sm-offset-3">
-              <form name="userForm" ng-submit="submitForm()" novalidate>
-                <div class="input-group input-group-lg wow fadeIn" data-wow-duration="1s">
-                  <input placeholder="Enter Your Email Address" type="email" name="email" class="form-control" ng-model="user.email">
-                  <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">ex: kyle@gmail.com</p>
-                  <span class="input-group-btn">
-                  <button class="btn btn-primary" type="submit" class="btn btn-primary btn-block" ng-disabled="userForm.$invalid">Continue</button>
-                  </span>
-                </div><!-- /input-group -->
-                </form>
-            </div><!-- /.col-lg-6 -->     
+<section id="science">
+  <div id="logo-rotate">
+    <img src="images/logo.svg" alt="">
+  </div>
+  <div class="container text-center">
+    <h1>The Science</h1>
+    <h3>Your body develops and functions according to the interactions between proteins. By understanding the intricacies of your DNA, you can optimize for certain lifestyle objectives.</h3>
+  </div>
+  <div class="container-fluid">
+    <div class="col-sm-4 wow fadeIn" data-wow-duration="1s">
+      <h3>Fat Loss</h3>
+      <p>The precise way your body burns, or metabolizes, fats are unique because of your individual genetics. By investigating the functional effectiveness of your genes involved in breakdown, storage and processing of food, we can provide a detailed nutritional and exercise framework for you to shed weight faster than ever before.</p>
     </div>
+    <div class="col-sm-4 wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+      <h3>Toning</h3>
+        <p>Your genes that determine neuromuscular efficiency determine how muscle fibers should be maximally contracted at a given time without risking injury. We analyze the genetic dynamics of these muscular strength-building processes to design a regimen that can make you stronger than ever before.</p>
+    </div>
+    <div class="col-sm-4 wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
+      <h3>Muscle Gain</h3>
+        <p>Your muscles grow when the fibers are damaged and subsequently repaired, growing larger in the process. Numerous genes and proteins mediate and regulate this repair while others digest and process the nutrients your muscles need to grow. By analyzing your specific genetics, we can determine ideal exercise and nutritional strategies for you to rapidly increase muscle mass.</p>
+    </div>
+  </div>
+  <br>
+</section>
 <section id="examples">
   <div class="container-fluid text-center">
-    <h1>Examples</h1>
-    <div class="col-sm-6">
+    <h1>Every output is different.</h1>
+    <div class="col-sm-4 col-sm-offset-2">
       <h3>Meet Ashwin</h3>
-      <div class="wow fadeIn" data-wow-duration="1s" style="margin: 0 auto; background-color: purple;height: 200px; width: 200px; border-radius: 200px;"></div>
+      <img src="images/ashwin.jpg" alt="Ashwin" class="headshot wow fadeIn" data-wow-duration="1s">
       <h4>Our CEO</h4>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-4">
       <h3>Meet Nus</h3>
-      <div class="wow fadeIn" data-wow-duration="1s" style="margin: 0 auto; background-color: purple;height: 200px; width: 200px; border-radius: 200px;"></div>
-      <h4>Our CFO</h4>
+      <img src="images/nus.jpg" alt="Nus" class="headshot wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+      <h4>Our COO</h4>
     </div>
     <div class="col-sm-8 col-sm-offset-2">
-      <p>Ashwin Murali and Nus Sharif are two members of the Gene Guru team, both with a goal of fat loss. Though it would seem that the two would have similar superfoods, the opposite is true. Have a look:</p>
+      <h1>Their Optimal Foods For Fat Loss</h1>
     </div>
     <div class="col-sm-8 col-sm-offset-2">
       <table class="table table-bordered table-responsive table-hover text-left">
@@ -140,7 +154,7 @@
         </tr>
         <tr>
           <td>Veggies</td>
-          <td>Avocados</td>
+          <td>Kale</td>
           <td>Cauliflower</td>
         </tr>
         <tr>
@@ -171,34 +185,20 @@ keep that information safe and secure in the following ways: </strong></p>
       <ul>
         <li>HIPPA compliance - Under GINA, your HMO and other physical care rates will never increase based on the results of a genetic test.</li>
         <li>Military-grade SHA1 and MD5 encryption of genomic data and data-transfer protocols.</li>
-        <li>Secure Sockets Layer (SSL) and AES-256 bit encryption.</li>
+        <!-- <li>Secure Sockets Layer (SSL) and AES-256 bit encryption.</li>
         <li>Gene Guru applications and infrastructure are regularly tested for
       security vulnerabilities and hardened to enhance security and protect
       against attacks.</li>
         <li>Gene Guru is designed with multiple layers of protection, including
       secure data transfer, encryption, network configuration, and application- and user-level controls that are distributed across a scalable, secure infrastructure. State-of-the-art industry standards of encryptions are constantly implemented to keep your data safe.</li>
         <li>Access via third-party apps - 
-      Some third party apps with Gene Guru integration will ask for permission to access your Gene Guru. To grant access, you will need to log in to your Gene Guru account and explicitly press the Authorize button when prompted. You can visit the My Apps section of your account settings to review the apps you've granted permission to and revoke access at your discretion.</li>
+      Some third party apps with Gene Guru integration will ask for permission to access your Gene Guru. To grant access, you will need to log in to your Gene Guru account and explicitly press the Authorize button when prompted. You can visit the My Apps section of your account settings to review the apps you've granted permission to and revoke access at your discretion.</li> -->
         <li>All sequencing executed in CLIA labs - CLIA is a widely accepted national standard of certification of the integrity and consistency of laboratory procedures.</li>
         <li>We promise to never share your data. - We will make good on your trust in us by always keeping your data protected within our systems. We use a number of physical, technical, and heuristic security measures to protect user information from unauthorized access. No one else will ever be granted access to it.</li>
       </ul>
     </div>
     <br>
 </section>
-<div class="email-field text-center">
-            <!-- EMAIL -->
-            <div class="col-sm-6 col-sm-offset-3">
-              <form name="userForm" ng-submit="submitForm()" novalidate>
-                <div class="input-group input-group-lg wow fadeIn" data-wow-duration="1s">
-                  <input placeholder="Enter Your Email Address" type="email" name="email" class="form-control" ng-model="user.email">
-                  <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">ex: kyle@gmail.com</p>
-                  <span class="input-group-btn">
-                  <button class="btn btn-primary" type="submit" class="btn btn-primary btn-block" ng-disabled="userForm.$invalid">Continue</button>
-                  </span>
-                </div><!-- /input-group -->
-                </form>
-            </div><!-- /.col-lg-6 -->     
-    </div> <!-- email-field -->
 <section id="faq">
         <div class="container">
           <h1>Frequently Asked Questions</h1>
@@ -343,28 +343,11 @@ keep that information safe and secure in the following ways: </strong></p>
           </div>
   </div>
 </section>
-
-
-<div class="email-field text-center">
-            <!-- EMAIL -->
-            <div class="col-sm-6 col-sm-offset-3">
-              <form name="userForm" ng-submit="submitForm()" novalidate>
-                <div class="input-group input-group-lg wow fadeIn" data-wow-duration="1s">
-                  <input placeholder="Enter Your Email Address" type="email" name="email" class="form-control" ng-model="user.email">
-                  <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">ex: kyle@gmail.com</p>
-                  <span class="input-group-btn">
-                  <button class="btn btn-primary" type="submit" class="btn btn-primary btn-block" ng-disabled="userForm.$invalid">Continue</button>
-                  </span>
-                </div><!-- /input-group -->
-                </form>
-            </div><!-- /.col-lg-6 -->     
-    </div> <!-- email-field -->
-
 <footer class="footer">
   <p class="footer-text">
     &#169; 2014 Gene Guru, Inc <span> | </span>
     <a href="/legal.html">legal</a> <span> | </span>
-    <a href="/forum">forum</a> <span> | </span>
+    <a>forum</a> <span> | </span>
     <a href="mailto:hello@geneguru.me">hello@geneguru.me</a>
   </p>
 </footer>
@@ -392,8 +375,6 @@ keep that information safe and secure in the following ways: </strong></p>
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-    <script src="scripts/wow.min.js"></script>
-    <script src="scripts/smooth-scroll.min.js"></script>
     <script src="bower_components/json3/lib/json3.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
@@ -434,14 +415,27 @@ $(function() {
         }
     });
 });
-
 </script>
 <script>
-var deg = 0;
-window.setInterval(function() {
-    deg += .1;
-    $("#logo-rotate").css('-webkit-transform','rotate(' + deg + 'deg)');
-}, 50);
+$(function() {
+    var collector = $("#collector");
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+    
+        if (scroll >= 300) {
+            collector.removeClass('collector-closed', 300).addClass("collector-opened", 300);
+        } else {
+            collector.removeClass("collector-opened", 300).addClass('collector-closed', 300);
+        }
+    });
+});
+</script>
+<script>
+//var deg = 0;
+//window.setInterval(function() {
+//    deg += .1;
+//    $("#logo-rotate").css('-webkit-transform','rotate(' + deg + 'deg)');
+//}, 50);
 </script>
 <script>
     smoothScroll.init();
@@ -449,6 +443,5 @@ window.setInterval(function() {
 <script>
  new WOW().init();
 </script>
-
 </body>
 </html>

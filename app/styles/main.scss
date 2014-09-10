@@ -9,7 +9,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
  
 @import "animate.scss";
 
-@import "animate.css";
+@import "checkout.scss";
 
 body {
   font-family: "Lato", "Helvetica Neue", "Helvetica", "Arial", Sans Serif;
@@ -46,7 +46,6 @@ p {
 .footer {
   padding-top: 19px;
   color: #777;
-  border-top: 1px solid #e5e5e5;
 }
 
 .container-narrow > hr {
@@ -97,7 +96,7 @@ p {
     }
   }
 #navbar {
-  padding: 1rem 1.5rem;
+  padding: 8px 10px 5px 10px;
 }
 @mixin transform($type) {
   -webkit-transform: $type;
@@ -168,6 +167,19 @@ p {
   }
 }
 
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  color: #fff;
+  background: none;
+}
+
+.nav > li > a:hover {
+  background: none;
+}
+
+.nav > li > a.dark-pill:hover {
+  background: #591296;
+}
+
 .dark-header {
   background-color: rgba(255,255,255,.9) !important;
   border-bottom: 1px solid #f6f6f6;
@@ -178,20 +190,18 @@ p {
       text-decoration: none !important;
     }
   }
+  .dark-pill {
+    background-color: #591296;
+    color: white !important;
+    :before {
+      background-color:#fff !important
+    }
+  }
   a:before, a:after{background-color:#591296 !important}
   h3 {
     display: inline !important;
     color: #591296 !important;
   }
-}
-
-.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-  color: #fff;
-  background: none;
-}
-
-.nav > li > a:hover {
-  background: none;
 }
 
 .form-control {
@@ -265,7 +275,7 @@ FOOTER
 .footer {
   background: #222;
   color: white;
-  padding: 40px; }
+  padding: 40px;}
   .footer .footer-text {
     text-align: center;
     font-size: 1em; }
@@ -278,3 +288,25 @@ FOOTER
       padding: 0 10px; }
   .footer p {
     margin-bottom: 0; }
+
+/* Media Queries */
+@media only screen and (max-width: 570px){
+  .light-pill {
+    display: none !important;
+  }
+  #home h1 {
+    font-size: 80px !important;
+  }
+}
+@media only screen and (max-width: 710px){
+  #home {
+    background: #591296; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #591296 0%, #42075c 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#591296), color-stop(100%,#42075c)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg, #591296 0%,#42075c 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg, #591296 0%,#42075c 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg, #591296 0%,#42075c 100%); /* IE10+ */
+    background: linear-gradient(135deg, #591296 0%,#42075c 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#591296', endColorstr='#42075c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  }
+}

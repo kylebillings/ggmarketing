@@ -6,7 +6,7 @@
 	background: -o-linear-gradient(-45deg, #591296 0%,#42075c 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(-45deg, #591296 0%,#42075c 100%); /* IE10+ */
 	background: linear-gradient(135deg, #591296 0%,#42075c 100%); /* W3C */
-	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#591296', endColorstr='#42075c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#591296', endColorstr='#42075c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	background: url("../images/lowpoly.png");
 	background-size: 100%;
 	padding-top: 11%;
@@ -19,7 +19,7 @@
 	}
 
 	h1 {
-		font-size: 80px;
+		font-size: 105px;
 		font-weight: 100;
 		z-index: 10;
 	}
@@ -37,18 +37,39 @@
 	    margin-right:auto;
 	    z-index: 0;
 	    top: 30px;
-	    width: 70%;
+	    width: 50%;
 	    opacity: .05;
 		}
+
+#collector {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 100;
+}
+.collector-closed {
+		display: none;
+	}
+.collector-opened {
+		display: block;
+	}
+
 .email-field {
 	position: relative;
-	z-index: 10;
 	width: 100%;
 	background-color: #f6f6f6;
-	padding: 25px;
+	padding: 15px;
 	.btn-primary {
 		border: none;
-	}
+		background: #591296; /* Old browsers */
+		background: -moz-linear-gradient(-45deg, #591296 0%, #42075c 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#591296), color-stop(100%,#42075c)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(-45deg, #591296 0%,#42075c 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(-45deg, #591296 0%,#42075c 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(-45deg, #591296 0%,#42075c 100%); /* IE10+ */
+		background: linear-gradient(135deg, #591296 0%,#42075c 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#591296', endColorstr='#42075c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */;
+		}
 	.col-sm-6 {
 		float: none;
 	}
@@ -58,15 +79,34 @@
 	}
 }
 
-#science, #privacy, #examples, #faq {
-	background-color: #fff;
+#science, #privacy, #examples, #faq, #product {
 	position: relative;
 	z-index: 10;
 	padding-top:53px;
+	padding-bottom: 53px;
 }
 
 #examples {
-	padding-bottom: 50px;
+	.headshot {
+		width: 200px;
+		border-radius:999pc;
+	}
+	table {
+		font-size: 18px;
+		td {
+			font-weight: 300;
+		}
+	}
+}
+
+#product {
+	.img-responsive {
+		height: 200px;
+		margin: 0 auto;
+	}
+	p {
+		text-align: left;
+	}
 }
 
 #privacy {
@@ -100,5 +140,6 @@
 		font-weight: 300;
 	}
 }
+
 
 //#42075C, #250A30, #FCFCFC
