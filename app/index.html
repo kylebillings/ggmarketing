@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Gene Guru | Genetic Nutrition</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -22,31 +22,47 @@
         <div id="navbar">
           <ul class="nav nav-pills pull-right">
             <!--<li class="active"><a ng-href="#">Home</a></li>-->
-            <li><a ng-href="#science">Science</a></li>
-            <li><a ng-href="#examples">Examples</a></li>
-            <li><a ng-href="#privacy">Privacy</a></li>
-            <li><a ng-href="#faq">FAQ</a></li>
-            
+            <li><a class="light-pill" data-scroll href="#science">Science</a></li>
+            <li><a class="light-pill" data-scroll href="#examples">Examples</a></li>
+            <li><a class="light-pill" data-scroll href="#privacy">Privacy</a></li>
+            <li><a class="light-pill" data-scroll href="#faq">FAQ</a></li>
+            <li><a class="dark-pill" data-scroll href="#home" onclick="document.getElementById('email-field').focus();">Sign Up</a></li>
           </ul>
           <a ng-href="#"><h3>Gene Guru</h3></a>
         </div>
       </div>
+      <!--<div id="collector" class="collector-closed">
+            <div class="email-field text-center">
+            <div class="col-sm-6 col-sm-offset-3">
+              <form name="userForm" ng-submit="submitForm()" novalidate>
+                <div class="input-group wow fadeIn" data-wow-duration="1s">
+                  <input placeholder="Enter Your Email Address" type="email" name="email" class="form-control" ng-model="user.email">
+                  <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">ex: kyle@gmail.com</p>
+                  <span class="input-group-btn">
+                  <button class="btn btn-primary" type="submit" class="btn btn-primary btn-block" ng-disabled="userForm.$invalid">Go!</button>
+                  </span>
+                </div>
+                </form>
+            </div>-->     
+    </div>
+      </div>
     <section id="home">
       <div class="container text-center">
-        <h1>DNA Based Diets</h1>
-        <h3>Diet plans based on your genetic information</h3><br/>
+        <h1>Gene Guru</h1>
+        <h3>Personalized nutrition based on your genetics</h3><br/>
 
         <div>
-          <form name="userForm" ng-submit="submitForm()" novalidate>
             <!-- EMAIL -->
-            <div class="col-sm-5 col-sm-offset-2 form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
-                <input placeholder="Enter Your Email Address" type="email" name="email" class="form-control text-center" ng-model="user.email">
-                <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">ex: kyle@gmail.com</p>
-            </div>
-            <div class="col-sm-3">
-              <button type="submit" class="btn btn-primary btn-block" ng-disabled="userForm.$invalid">Continue</button>
-            </div>
-          </form>
+            <div class="col-sm-8 col-sm-offset-2">
+              <form name="userForm" ng-submit="submitForm()" novalidate>
+                <div class="input-group input-group-lg">
+                  <input id="email-field" placeholder="Enter Your Email Address" type="email" name="email" class="form-control" ng-model="user.email">
+                  <span class="input-group-btn">
+                  <button class="btn btn-primary" type="submit" class="btn btn-primary btn-block" ng-disabled="userForm.$invalid">Go!</button>
+                  </span>
+                </div><!-- /input-group -->
+                </form>
+            </div><!-- /.col-lg-6 -->     
         </div>
       </div>
     </section>
@@ -56,144 +72,138 @@
         <div ng-view="main.html"></div>
         <div ng-view="science"></div>
       </div>-->
-
+<section id="product">
+  <div class="container text-center">
+    <h1>Gene Guru Offers</h1>
+  </div>
+  <div class="container-fluid text-center">
+    <div class="col-sm-5 col-sm-offset-1 wow slideInLeft" data-wow-duration="1s">
+      <h3>DNA Analysis</h3>
+      <img class="img-responsive" src="images/logo-low-poly.png" alt="">
+      <p>If you already have your data analyzed, we can process your DNA right away and deliver a personalized list of recommendations for your particular genetics.</p>
+    </div>
+    <div class="col-sm-5 wow slideInRight" data-wow-duration="1s">
+      <h3>DNA Test + Analysis</h3>
+      <img class="img-responsive" src="images/logo+test-low-poly.png" alt="">
+      <p>We will gladly send you a DNA test kit should you need your genetic data analyzed. You will receive the data along with your recommendations.</p>
+    </div>
+  </div>
+  <br>
+</section>
 <section id="science">
   <div id="logo-rotate">
     <img src="images/logo.svg" alt="">
   </div>
   <div class="container text-center">
     <h1>The Science</h1>
-    <!-- <div>
-        <svg width="250" height="250">   
-          <svg class="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" enable-background="new 0 0 800 800"><path class="animated svg-line-sm-1" stroke="#999" stroke-width="5" stroke-miterlimit="10" fill="none" d="M340 63l392.5 258.5"/><path class="animated svg-line-sm-2" stroke="#999" stroke-width="5" stroke-miterlimit="10" fill="none" d="M294.2 171.2l-63.7 142.3"/><path class="animated svg-line-sm-3" stroke="#999" stroke-width="5" stroke-miterlimit="10" fill="none" d="M230.5 313.5l541 90"/><path class="animated svg-line-sm-4" stroke="#999" stroke-width="5" stroke-miterlimit="10" fill="none" d="M294.2 172.5l477.3 231"/><path class="animated svg-line-sm-5" stroke="#999" stroke-width="5" stroke-miterlimit="10" fill="none" d="M771.5 403.5L464 661"/><path class="animated svg-line-sm-6" stroke="#999" stroke-width="5" stroke-miterlimit="10" fill="none" d="M585.2 399L363 563.5"/><path class="animated svg-line-sm-7" stroke="#999" stroke-width="5" stroke-miterlimit="10" fill="none" d="M413 172.5L284 261"/><path class="animated svg-line-sm-8" stroke="#999" stroke-width="5" stroke-miterlimit="10" fill="none" d="M546.5 261.5L549 653"/><path class="animated svg-line-sm-9" stroke="#999" stroke-width="5" stroke-miterlimit="10" fill="none" d="M251.5 369.5l111.5 194"/><path class="animated svg-line-md-1" stroke="#555" stroke-width="7" stroke-miterlimit="10" fill="none" d="M363 305.7L217.5 540.5"/><path class="animated svg-line-md-2" stroke="#555" stroke-width="7" stroke-miterlimit="10" fill="none" d="M77.5 188.5l334 516"/><path class="animated svg-line-md-3" stroke="#555" stroke-width="7" stroke-miterlimit="10" fill="none" d="M441.5 449.5l-224 91"/><path class="animated svg-line-md-4" stroke="#555" stroke-width="7" stroke-miterlimit="10" fill="none" d="M28.5 468.5l49-280"/><path class="animated svg-line-md-5" stroke="#555" stroke-width="7" stroke-miterlimit="10" fill="none" d="M411.5 704.5l-383-236"/><path class="animated svg-line-md-6" stroke="#555" stroke-width="7" stroke-miterlimit="10" fill="none" d="M361.5 305.7l80 143.8"/><path class="animated svg-line-md-7" stroke="#555" stroke-width="7" stroke-miterlimit="10" fill="none" d="M673.7 413l-232.2 36.5"/><path class="animated svg-line-lg-1" stroke="#000" stroke-width="9" stroke-miterlimit="10" fill="none" d="M234 205l-72 170"/><path class="animated svg-line-lg-2" stroke="#000" stroke-width="9" stroke-miterlimit="10" fill="none" d="M234 647l250-427"/><path class="animated svg-line-lg-3" stroke="#000" stroke-width="9" stroke-miterlimit="10" fill="none" d="M634 447L484 585"/><path class="animated svg-line-lg-4" stroke="#000" stroke-width="9" stroke-miterlimit="10" fill="none" d="M634 447L234 647"/><path class="animated svg-line-lg-5" stroke="#000" stroke-width="9" stroke-miterlimit="10" fill="none" d="M484 585l-250 62"/><path class="animated svg-line-lg-6" stroke="#000" stroke-width="9" stroke-miterlimit="10" fill="none" d="M334 423L234 205"/><path class="animated svg-line-lg-7" stroke="#000" stroke-width="9" stroke-miterlimit="10" fill="none" d="M484 220v365"/><circle stroke-width="3" class="animated infinite svg-target-point-1 flash" stroke="#777" stroke-miterlimit="10" cx="413.2" cy="172.2" r="19" fill="none"/><circle stroke-width="3" class="animated infinite svg-target-point-2 flash" stroke="#777" stroke-miterlimit="10" cx="251.2" cy="369.2" r="19" fill="none"/><circle stroke-width="3" class="animated infinite svg-target-point-3 flash" stroke="#777" stroke-miterlimit="10" cx="585.2" cy="399" r="19" fill="none"/><circle stroke-width="3" class="animated infinite svg-target-point-4 flash" stroke="#777" stroke-miterlimit="10" cx="464.2" cy="661.2" r="19" fill="none"/><circle stroke-width="3" class="animated infinite svg-target-point-5 flash" stroke="#555" stroke-miterlimit="10" cx="217.5" cy="540.5" r="19" fill="none"/><circle class="animated svg-data-point-lg-1" cx="234.5" cy="205.2" r="12.5"/><circle class="animated svg-data-point-lg-2" cx="161.5" cy="375.2" r="12.5"/><circle class="animated svg-data-point-lg-3" cx="483.5" cy="220.2" r="12.5"/><circle class="animated svg-data-point-lg-4" cx="484.5" cy="585.2" r="12.5"/><circle class="animated svg-data-point-lg-5" cx="634.5" cy="447.2" r="12.5"/><circle class="animated svg-data-point-lg-6" cx="234.5" cy="647.2" r="12.5"/><circle class="animated svg-data-point-lg-7" cx="334.5" cy="423.2" r="12.5"/><circle class="animated svg-data-point-md-1" fill="#555" cx="441.7" cy="449" r="10"/><circle class="animated svg-data-point-md-2" fill="#555" cx="673.7" cy="413" r="10"/><circle class="animated svg-data-point-md-3" fill="#555" cx="363" cy="305.7" r="10"/><circle class="animated svg-data-point-md-4" fill="#555" cx="77.7" cy="188" r="10"/><circle class="animated svg-data-point-md-5" fill="#555" cx="411.7" cy="704" r="10"/><circle class="animated svg-data-point-md-6" fill="#555" cx="28.7" cy="468" r="10"/><circle class="animated svg-data-point-md-7" fill="#555" cx="217.7" cy="540" r="10"/><circle fill="#999" class="animated svg-data-point-sm-1" cx="294.2" cy="171.2" r="7.5"/><circle fill="#999" class="animated svg-data-point-sm-2" cx="284.2" cy="261.2" r="7.5"/><circle fill="#999" class="animated svg-data-point-sm-3" cx="413.2" cy="172.2" r="7.5"/><circle fill="#999" class="animated svg-data-point-sm-4" cx="340.2" cy="63.2" r="7.5"/><circle fill="#999" class="animated svg-data-point-sm-5" cx="732.2" cy="321.2" r="7.5"/><circle fill="#999" class="animated svg-data-point-sm-6" cx="771.2" cy="403.2" r="7.5"/><circle fill="#999" class="animated svg-data-point-sm-7" cx="464.2" cy="661.2" r="7.5"/><circle fill="#999" class="animated svg-data-point-sm-8" cx="549.2" cy="653.2" r="7.5"/><circle fill="#999" class="animated svg-data-point-sm-9" cx="546.2" cy="261.2" r="7.5"/><circle fill="#999" class="animated svg-data-point-sm-10" cx="363.2" cy="563.2" r="7.5"/><circle fill="#999" class="animated svg-data-point-sm-11" cx="585.2" cy="399.2" r="7.5"/><circle fill="#999" class="animated svg-data-point-sm-12" cx="230.2" cy="313.2" r="7.5"/><circle fill="#999" class="animated svg-data-point-sm-13" cx="251.2" cy="369.2" r="7.5"/><circle class="animated svg-main-circle" stroke="#000" stroke-width="14" stroke-miterlimit="10" cx="390" cy="430" r="308" fill="none"/></svg>
-        </svg>
-      </div> -->
-    <h3>Your body develops and functions according to the interactions between proteins. By understanding the intricacies of one's DNA, one can optimize for certain lifestyle objectives.</h3>
+    <h3>Your body develops and functions according to the interactions between proteins. By understanding the intricacies of your DNA, you can optimize for certain lifestyle objectives.</h3>
   </div>
   <div class="container-fluid">
-    <div class="col-sm-4">
-      <h3>Fat Loss</h3>
-      <p>The precise way your body burns, or metabolizes, fats are unique because of your individual genetics. By investigating the functional effectiveness of your genes involved in breakdown, storage and processing of food, we can provide a detailed nutritional and exercise framework for you to shed weight faster than ever before.</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Toning</h3>
-        <p>Your genes that determine neuromuscular efficiency determine how muscle fibers should be maximally contracted at a given time without risking injury. We analyze the genetic dynamics of these muscular strength-building processes to design a regimen that can make you stronger than ever before.</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Muscle Gain</h3>
-        <p>Your muscles grow when the fibers are damaged and subsequently repaired, growing larger in the process. Numerous genes and proteins mediate and regulate this repair while others digest and process the nutrients your muscles need to grow. By analyzing your specific genetics, we can determine ideal exercise and nutritional strategies for you to rapidly increase muscle mass.</p>
-    </div>
-    <div class="col-sm-6 col-sm-offset-3">
-      <p>Interested in learning more about how Gene Guru works? Please contact us at <a href="#science">example@geneguru.me.</a></p>
+    <div class="row">
+      <div class="col-sm-4 wow fadeIn" data-wow-duration="1s">
+        <h3>Fat Loss</h3>
+        <p>The precise way your body burns, or metabolizes, fats are unique because of your individual genetics. By investigating the functional effectiveness of your genes involved in breakdown, storage and processing of food, we can provide a detailed nutritional and exercise framework for you to shed weight faster than ever before.</p>
+      </div>
+      <div class="col-sm-4 wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+        <h3>Toning</h3>
+          <p>Your genes that determine neuromuscular efficiency determine how muscle fibers should be maximally contracted at a given time without risking injury. We analyze the genetic dynamics of these muscular strength-building processes to design a regimen that can make you stronger than ever before.</p>
+      </div>
+      <div class="col-sm-4 wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
+        <h3>Muscle Gain</h3>
+          <p>Your muscles grow when the fibers are damaged and subsequently repaired, growing larger in the process. Numerous genes and proteins mediate and regulate this repair while others digest and process the nutrients your muscles need to grow. By analyzing your specific genetics, we can determine ideal exercise and nutritional strategies for you to rapidly increase muscle mass.</p>
+      </div>
     </div>
   </div>
   <br>
 </section>
-    <div class="email-field text-center">
-      <div class="container">
-        <div class="col-sm-8">
-          <input class="form-control form-item" type="email" placeholder="Enter Your Email Address">
-        </div>
-        <div class="col-sm-4">
-          <input class="btn btn-primary tn-block" type="submit" value="Access Your DNA Based Diet">
-        </div>
+<section id="examples">
+  <div class="container-fluid text-center card">
+    <h1>Every output is different.</h1>
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-2">
+        <h3>Meet Ashwin</h3>
+        <img src="images/ashwin.jpg" alt="Ashwin" class="headshot wow fadeIn" data-wow-duration="1s">
+        <h4>Our CEO</h4>
+      </div>
+      <div class="col-sm-4">
+        <h3>Meet Nus</h3>
+        <img src="images/nus.jpg" alt="Nus" class="headshot wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+        <h4>Our COO</h4>
       </div>
     </div>
-<section id="examples">
-  <div class="container-fluid text-center">
-    <h1>Examples</h1>
-    <div class="col-sm-6">
-      <h3>Meet Ashwin</h3>
-      <div style="margin: 0 auto; background-color: purple;height: 200px; width: 200px; border-radius: 200px;"></div>
-      <h4>Our CEO</h4>
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h1>Their Optimal Foods For Fat Loss</h1>
+      </div>
+      <div class="col-sm-8 col-sm-offset-2">
+        <table class="table table-bordered table-responsive table-hover text-left">
+          <tr>
+            <th>Top Foods</th>
+            <th>Ashwin</th>
+            <th>Nus</th>
+          </tr>
+          <tr>
+            <td>Starch</td>
+            <td>Wild Rice</td>
+            <td>Long-Grain White Rice</td>
+          </tr>
+          <tr>
+            <td>Protein</td>
+            <td>Grass-Fed Lamb</td>
+            <td>Whey</td>
+          </tr>
+          <tr>
+            <td>Fruit</td>
+            <td>Avocados</td>
+            <td>Limes</td>
+          </tr>
+          <tr>
+            <td>Veggies</td>
+            <td>Kale</td>
+            <td>Cauliflower</td>
+          </tr>
+          <tr>
+            <td>Nuts</td>
+            <td>Almonds</td>
+            <td>Olives</td>
+          </tr>
+          <tr>
+            <td>Fats</td>
+            <td>Olive Oil</td>
+            <td>Coconut Oil</td>
+          </tr>
+          <tr>
+            <td>Dairy</td>
+            <td>Grass-Fed Butter</td>
+            <td>Grass-Fed Butter</td>
+          </tr>
+        </table>
+      </div>
     </div>
-    <div class="col-sm-6">
-      <h3>Meet Nus</h3>
-      <div style="margin: 0 auto; background-color: purple;height: 200px; width: 200px; border-radius: 200px;"></div>
-      <h4>Our CFO</h4>
-    </div>
-    <div class="col-sm-8 col-sm-offset-2">
-      <p>Ashwin Murali and Nus Sharif are two members of the Gene Guru team, both with a goal of fat loss. Though it would seem that the two would have similar superfoods, the opposite is true. Have a look:</p>
-    </div>
-    <div class="col-sm-8 col-sm-offset-2">
-      <table class="table table-bordered table-responsive table-hover text-left">
-        <tr>
-          <th>Top Foods</th>
-          <th>Ashwin</th>
-          <th>Nus</th>
-        </tr>
-        <tr>
-          <td>Starch</td>
-          <td>Wild Rice</td>
-          <td>Long-Grain White Rice</td>
-        </tr>
-        <tr>
-          <td>Protein</td>
-          <td>Grass-Fed Lamb</td>
-          <td>Whey</td>
-        </tr>
-        <tr>
-          <td>Fruit</td>
-          <td>Avocados</td>
-          <td>Limes</td>
-        </tr>
-        <tr>
-          <td>Veggies</td>
-          <td>Avocados</td>
-          <td>Cauliflower</td>
-        </tr>
-        <tr>
-          <td>Nuts</td>
-          <td>Almonds</td>
-          <td>Olives</td>
-        </tr>
-        <tr>
-          <td>Fats</td>
-          <td>Olive Oil</td>
-          <td>Coconut Oil</td>
-        </tr>
-        <tr>
-          <td>Dairy</td>
-          <td>Grass-Fed Butter</td>
-          <td>Grass-Fed Butter</td>
-        </tr>
-      </table>
-    </div>
-    <br>
 </section>
 <section id="privacy">
   <div class="container">
-    <h1>Privacy</h1>
+    <h1><span class="glyphicon glyphicon-lock"></span> Privacy</h1>
     <p><strong>Your genetic profile is your most personal information, and we will always 
 keep that information safe and secure in the following ways: </strong></p>
 
       <ul>
         <li>HIPPA compliance - Under GINA, your HMO and other physical care rates will never increase based on the results of a genetic test.</li>
         <li>Military-grade SHA1 and MD5 encryption of genomic data and data-transfer protocols.</li>
-        <li>Secure Sockets Layer (SSL) and AES-256 bit encryption.</li>
+        <!-- <li>Secure Sockets Layer (SSL) and AES-256 bit encryption.</li>
         <li>Gene Guru applications and infrastructure are regularly tested for
       security vulnerabilities and hardened to enhance security and protect
       against attacks.</li>
         <li>Gene Guru is designed with multiple layers of protection, including
       secure data transfer, encryption, network configuration, and application- and user-level controls that are distributed across a scalable, secure infrastructure. State-of-the-art industry standards of encryptions are constantly implemented to keep your data safe.</li>
         <li>Access via third-party apps - 
-      Some third party apps with Gene Guru integration will ask for permission to access your Gene Guru. To grant access, you will need to log in to your Gene Guru account and explicitly press the Authorize button when prompted. You can visit the My Apps section of your account settings to review the apps you've granted permission to and revoke access at your discretion.</li>
+      Some third party apps with Gene Guru integration will ask for permission to access your Gene Guru. To grant access, you will need to log in to your Gene Guru account and explicitly press the Authorize button when prompted. You can visit the My Apps section of your account settings to review the apps you've granted permission to and revoke access at your discretion.</li> -->
         <li>All sequencing executed in CLIA labs - CLIA is a widely accepted national standard of certification of the integrity and consistency of laboratory procedures.</li>
         <li>We promise to never share your data. - We will make good on your trust in us by always keeping your data protected within our systems. We use a number of physical, technical, and heuristic security measures to protect user information from unauthorized access. No one else will ever be granted access to it.</li>
       </ul>
     </div>
     <br>
 </section>
-    <div class="email-field text-center">
-      <div class="container">
-        <div class="col-sm-8">
-          <input class="form-control form-item" type="email" placeholder="Enter Your Email Address">
-        </div>
-        <div class="col-sm-4">
-          <input class="btn btn-primary tn-block" type="submit" value="Access Your DNA Based Diet">
-        </div>
-      </div>
-    </div>
 <section id="faq">
         <div class="container">
           <h1>Frequently Asked Questions</h1>
@@ -338,32 +348,14 @@ keep that information safe and secure in the following ways: </strong></p>
           </div>
   </div>
 </section>
-
-
-
-    <div class="email-field text-center">
-      <div class="container">
-        <div class="col-sm-8">
-          <input class="form-control form-item" type="email" placeholder="Enter Your Email Address">
-        </div>
-        <div class="col-sm-4">
-          <input class="btn btn-primary tn-block" type="submit" value="Access Your DNA Based Diet">
-        </div>
-      </div>
-    </div>
-    <div class="footer">
-      <div class="container">
-        <div class="col-sm-4">
-          Contact Us
-        </div>
-        <div class="col-sm-4">
-          Complain
-        </div>
-        <div class="col-sm-4">
-          Do Something Else
-        </div>
-      </div>
-    </div>
+<footer class="footer">
+  <p class="footer-text">
+    &#169; 2014 Gene Guru, Inc <span> | </span>
+    <a href="/legal.html">legal</a> <span> | </span>
+    <a>forum</a> <span> | </span>
+    <a href="mailto:hello@geneguru.me">hello@geneguru.me</a>
+  </p>
+</footer>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -428,7 +420,20 @@ $(function() {
         }
     });
 });
-
+</script>
+<script>
+$(function() {
+    var collector = $("#collector");
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+    
+        if (scroll >= 300) {
+            collector.removeClass('collector-closed', 300).addClass("collector-opened", 300);
+        } else {
+            collector.removeClass("collector-opened", 300).addClass('collector-closed', 300);
+        }
+    });
+});
 </script>
 <script>
 var deg = 0;
@@ -437,6 +442,11 @@ window.setInterval(function() {
     $("#logo-rotate").css('-webkit-transform','rotate(' + deg + 'deg)');
 }, 50);
 </script>
-
+<script>
+    smoothScroll.init();
+</script>
+<script>
+ new WOW().init();
+</script>
 </body>
 </html>

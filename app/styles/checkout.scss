@@ -1,0 +1,293 @@
+// colors
+
+$color-1: #591296; // purple
+$color-2: #DADFE1; // Gray
+$color-3: #333; // Dark Gray
+$color-4: #50E3C2; // teal
+$color-5: #92c195; // green
+
+// rem fallback - credits: http://zerosixthree.se/
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+// center vertically and/or horizontally an absolute positioned element
+
+@mixin center($xy:xy) {
+  @if $xy == xy {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    @include transform(translateX(-50%) translateY(-50%));
+  }
+  @else if $xy == x {
+    left: 50%;
+    right: auto;
+    @include transform(translateX(-50%));
+  }
+  @else if $xy == y {
+    top: 50%;
+    bottom: auto;
+    @include transform(translateY(-50%));
+  }
+}
+
+// border radius
+
+@mixin border-radius($radius:.25em) {
+  border-radius: $radius;
+}
+
+// antialiasing mode font rendering
+
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// breakpoints
+   
+$S:     320px;   
+$M:     768px;     
+$L:     1170px;     
+
+// media queries
+
+@mixin MQ($canvas) {
+  @if $canvas == S {
+   @media only screen and (min-width: $S) { @content; } 
+  }
+  @else if $canvas == M {
+   @media only screen and (min-width: $M) { @content; } 
+  }
+  @else if $canvas == L {
+   @media only screen and (min-width: $L) { @content; } 
+  }
+}
+
+// super light grid - it works with the .cd-container class inside style.scss
+
+@mixin column($percentage, $float-direction:left) {
+  width: 100% * $percentage;
+  float: $float-direction;
+}
+
+#flow {
+	padding-top: 35px;
+	padding-bottom: 35px;
+
+	label {
+		font-weight: 300;
+		color: $color-2;
+	}
+
+	input:hover {
+		background-color: #ECF0F1;
+	}
+
+	input[type="submit"]:hover {
+		background-color: darken($color-4, 10%);
+	}
+
+	input[type=number]{
+	    font-size:18px;
+	    font-weight: 300;
+	    padding:3px;
+	    margin:0;
+	    border:none;
+	    border-radius:4px;
+	    text-align:center;
+	}
+
+	input[type=number]:focus{
+	    outline:none;
+	}
+
+	.btn-submitted {
+		background-color: white;
+		color: $color-2;
+	}	
+
+	.form-control {
+		border: none;
+		box-shadow: none;
+		font-size: 18px;
+		font-weight: 300;
+	}
+
+	.form-group {
+		text-align: left;
+	}
+
+	.cd-container {
+	  width: 90%;
+	  max-width: 768px;
+	  margin: 0 auto;
+	  border-radius: 5px;
+	}
+	.cd-container:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+
+	.email-label {
+		float: left;
+		color: $color-2;
+	}
+
+	.btn:focus {
+		outline: none;
+	}
+
+	#btn-23 {
+		background-color: $color-4;
+		color: white;
+		font-weight: 300;
+		:hover {
+			background-color: darken($color-4, 10%);
+		}
+	}
+	#btn-kit {
+		background-color: #B946C7;
+		color: white;
+		font-weight: 300;
+		:hover {
+			background-color: darken($color-1, 10%);
+		}
+	}
+
+	.datefield { 
+	    padding: 0.3em; 
+	    background: #FFF; 
+	    border-radius: 4px;
+	    color: $color-3;
+	}
+
+	.datefield * { 
+	    display: inline-block;
+	}
+
+	.datefield input { 
+	    width: 2.5em; 
+	    padding: 0 0.4em; 
+	    border: none; 
+	    font-size: 18px;
+	    font-weight: 300; 
+	    background: none;
+	    color: #000;            
+	}
+
+	.datefield input#year { width:5em; }
+	.datefield input:focus { outline:none; }	
+
+}
+
+#more {
+	float: left;
+	text-align: left;
+	padding-bottom: 15px;
+	color: $color-3;
+
+	.optional {
+		display: none
+	}
+}
+
+.cd-submit {
+  width: 100%;
+  bottom: 0;
+}
+.cd-submit:focus {
+  outline: none;
+}
+
+.cd-submit {
+  margin-top: 30px;
+  border: none;
+  border-radius: 5px;
+  padding: 18px;
+  font-size: 18px;
+  font-weight: 500;
+  top: 50%;
+  cursor: pointer;
+  background-color: $color-4;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  z-index: 2;
+}
+
+#data {
+	margin-bottom: 50px;
+}
+
+.icon {
+	margin: 0 auto;
+	width: 80px;
+	margin-bottom: 35px;
+}
+
+// hidden by default
+#account-info {
+	display: none;
+}
+#payment-23 {
+	display: none;
+}
+#payment-kit {
+	display: none;
+}
+#box-shipping {
+	padding-top:40px;
+	display: none;
+}
+
+.form-item {
+	top: 0;
+	left: 0;
+	height: 100%;
+	background: transparent;
+	font-weight: 300;
+	color: $color-1;
+	z-index: 1;
+	:hover {
+		background-color: #ECF0F1;
+	}
+	:focus {
+		outline: none;
+	}
+
+	@include MQ(M) {
+		@include font-size(24px);
+	}
+}
+
+.form-item {
+  width: 100%;
+  bottom: 0;
+}
+
+.white-bg {
+	background-color: #fff;
+}
+
+.padding {
+	padding: 32px;
+}
+
+// Fix for Chrome Autofill Yellowing
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
