@@ -25,7 +25,7 @@
             <li><a class="light-pill" data-scroll href="#science">Science</a></li>
             <li><a class="light-pill" data-scroll href="#examples">Examples</a></li>
             <li><a class="light-pill" data-scroll href="#faq">FAQ</a></li>
-            <li><a class="light-pill" data-scroll href="#privacy">Privacy</a></li>
+            <li class="last"><a class="light-pill" data-scroll href="#privacy">Privacy</a></li>
             <li>
               <div id="email-collector">
               <div class="search-container">
@@ -58,6 +58,7 @@
     </div>
       </div>
     <section id="home">
+      <div id="home-background" class="mouse-bg"></div>
       <div class="container text-center">
         <h1>Gene Guru</h1>
         <h3>Personalized nutrition based on your genetics</h3><br/>
@@ -358,6 +359,19 @@
       </div>
     </div>
 </section>
+<div class="email-field text-center">
+            <div class="col-sm-6 col-sm-offset-3">
+              <form name="userForm" ng-submit="submitForm()" novalidate>
+                <label for="email">Access Your Optimized Diet</label>
+                <div class="input-group wow fadeIn" data-wow-duration="1s">
+                  <input placeholder="Enter Your Email Address" type="email" name="email" class="form-control" ng-model="user.email">
+                  <span class="input-group-btn">
+                  <button type="submit" class="btn btn-primary btn-block" ng-disabled="userForm.$invalid">Go!</button>
+                  </span>
+                </div>
+                </form>
+            </div>
+    </div>
 <footer class="footer">
   <p class="footer-text">
     &#169; 2014 Gene Guru, Inc <span> | </span>
@@ -416,6 +430,9 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/smooth-scroll.min.js"></script>
+        <script src="scripts/wow.min.js"></script>
+        <script src="scripts/mouse.parallax.js"></script>
         <!-- endbuild -->
 <script>
 $(function() {
@@ -459,8 +476,10 @@ window.setInterval(function() {
  new WOW().init();
 </script>
 <script>
-$('#email-collector > .button').aim({
-    className: 'open'
+$(document).ready(function() {
+$('#home-background').mouseParallax({ moveFactor: 3 });
+ 
+$('body').height(3000);
 });
 </script>
 </body>

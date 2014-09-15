@@ -108,6 +108,10 @@ p {
   }
 
 #header {
+  min-height: 48px;
+  .last {
+    margin-right: 90px;
+  }
   z-index: 100;
   background: none;
   padding: 10px 20px 8px 20px;
@@ -281,6 +285,8 @@ a:hover:before {
 }
 
 .search-container {
+  position: absolute;
+  right: 10px;
   overflow: hidden;
   float: right;
   width: 6em;
@@ -361,9 +367,14 @@ FOOTER
     margin-bottom: 0; }
 
 /* Media Queries */
-@media only screen and (max-width: 570px){
+@media only screen and (max-width: 600px){
   .light-pill {
     display: none !important;
+  }
+  #header {
+    .last {
+      margin-right: 0px;
+    }
   }
   #home h1 {
     font-size: 80px !important;

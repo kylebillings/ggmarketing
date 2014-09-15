@@ -1,5 +1,6 @@
 @import "mixins";
 #home {
+	#home-background {
 	background: #591296; /* Old browsers */
 	background: -moz-linear-gradient(-45deg, #591296 0%, #42075c 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#591296), color-stop(100%,#42075c)); /* Chrome,Safari4+ */
@@ -9,7 +10,8 @@
 	background: linear-gradient(135deg, #591296 0%,#42075c 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#591296', endColorstr='#42075c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	background: url("../images/lowpoly.png");
-	background-size: 100%;
+	}
+	
 	padding-top: 11%;
 	padding-bottom: 10%;
 	color: #fff;
@@ -32,13 +34,13 @@
 }
 
 .mouse-bg {
-	left: 0;
-	right: 0;
-	bottom: 0;
-	top: 0;
-	position: fixed;
-	z-index: -1;
-}
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		position: fixed;
+		z-index: -1;
+		}
 
 @include keyframes(rotate-helix) {
   0%   { @include transform(rotate(0deg) translate3d( 0, 0, 0)); }
@@ -63,25 +65,17 @@
 .email-field {
 	position: relative;
 	width: 100%;
-	background-color: #f6f6f6;
+	background-color: #591296;
 	padding: 15px;
-	.btn-primary {
-		border: none;
-		background: #591296; /* Old browsers */
-		background: -moz-linear-gradient(-45deg, #591296 0%, #42075c 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#591296), color-stop(100%,#42075c)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(-45deg, #591296 0%,#42075c 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(-45deg, #591296 0%,#42075c 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(-45deg, #591296 0%,#42075c 100%); /* IE10+ */
-		background: linear-gradient(135deg, #591296 0%,#42075c 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#591296', endColorstr='#42075c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */;
-	}
 	.col-sm-6 {
 		float: none;
 	}
 
 	input[type="email"] {
 		width: 100%;
+	}
+	label {
+		color: #fff;
 	}
 }
 
@@ -123,8 +117,8 @@
 }
 
 #science {
-  background: #fff;
-  color: #000;
+  background: #591296;
+  color: #fff;
   padding: 100px 0;
 }
 #product {
@@ -138,15 +132,19 @@
 }
 
 #privacy {
-	background-color: #42075c;
+	background-color: #591296;
 	color: #fff;
 }
 
 #faq {
+	h1 {
+		color: #FFF;
+	}
 	.panel-heading {
 		padding: 0px;
 		:hover {
-			background-color: #f9f9f9;
+			background-color: #591296;
+			color: #fff;
 		}
 		.panel-title > a {
 			display: block;
