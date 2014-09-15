@@ -24,9 +24,20 @@
             <!--<li class="active"><a ng-href="#">Home</a></li>-->
             <li><a class="light-pill" data-scroll href="#science">Science</a></li>
             <li><a class="light-pill" data-scroll href="#examples">Examples</a></li>
-            <li><a class="light-pill" data-scroll href="#privacy">Privacy</a></li>
             <li><a class="light-pill" data-scroll href="#faq">FAQ</a></li>
-            <li><a class="btn btn-primary" data-scroll href="#home" onclick="document.getElementById('email-field').focus();">Sign Up</a></li>
+            <li><a class="light-pill" data-scroll href="#privacy">Privacy</a></li>
+            <li>
+              <div id="email-collector">
+              <div class="search-container">
+                <input type = "text" placeholder = "Email Address">
+                <a class="button btn btn-primary">
+                  Sign Up
+                </a>
+              </div>
+            </div>
+            </li>
+          </a>
+        </div>
           </ul>
           <a ng-href="#"><h3>Gene Guru</h3></a>
         </div>
@@ -50,7 +61,6 @@
       <div class="container text-center">
         <h1>Gene Guru</h1>
         <h3>Personalized nutrition based on your genetics</h3><br/>
-
         <div>
             <!-- EMAIL -->
             <div class="col-sm-8 col-sm-offset-2">
@@ -95,7 +105,6 @@
     <img src="images/logo.svg" alt="">
   </div>
   <div class="container text-center">
-    <h1>The Science</h1>
     <h3>Your body develops and functions according to the interactions between proteins. By understanding the intricacies of your DNA, you can optimize for certain lifestyle objectives.</h3>
   </div>
   <div class="container-fluid">
@@ -180,29 +189,6 @@
         </table>
       </div>
     </div>
-</section>
-<section id="privacy">
-  <div class="container">
-    <h1><span class="glyphicon glyphicon-lock"></span> Privacy</h1>
-    <p><strong>Your genetic profile is your most personal information, and we will always 
-keep that information safe and secure in the following ways: </strong></p>
-
-      <ul>
-        <li>HIPPA compliance - Under GINA, your HMO and other physical care rates will never increase based on the results of a genetic test.</li>
-        <li>Military-grade SHA1 and MD5 encryption of genomic data and data-transfer protocols.</li>
-        <!-- <li>Secure Sockets Layer (SSL) and AES-256 bit encryption.</li>
-        <li>Gene Guru applications and infrastructure are regularly tested for
-      security vulnerabilities and hardened to enhance security and protect
-      against attacks.</li>
-        <li>Gene Guru is designed with multiple layers of protection, including
-      secure data transfer, encryption, network configuration, and application- and user-level controls that are distributed across a scalable, secure infrastructure. State-of-the-art industry standards of encryptions are constantly implemented to keep your data safe.</li>
-        <li>Access via third-party apps - 
-      Some third party apps with Gene Guru integration will ask for permission to access your Gene Guru. To grant access, you will need to log in to your Gene Guru account and explicitly press the Authorize button when prompted. You can visit the My Apps section of your account settings to review the apps you've granted permission to and revoke access at your discretion.</li> -->
-        <li>All sequencing executed in CLIA labs - CLIA is a widely accepted national standard of certification of the integrity and consistency of laboratory procedures.</li>
-        <li>We promise to never share your data. - We will make good on your trust in us by always keeping your data protected within our systems. We use a number of physical, technical, and heuristic security measures to protect user information from unauthorized access. No one else will ever be granted access to it.</li>
-      </ul>
-    </div>
-    <br>
 </section>
 <section id="faq">
         <div class="container">
@@ -348,6 +334,30 @@ keep that information safe and secure in the following ways: </strong></p>
           </div>
   </div>
 </section>
+<section id="privacy">
+  <div class="container text-center">
+    <h1><span class="glyphicon glyphicon-lock"></span> Privacy</h1>
+      <div class="text-left">
+      <p><strong>Your genetic profile is your most personal information, and we will always 
+  keep that information safe and secure in the following ways: </strong></p>
+
+        <ul>
+          <li>HIPPA compliance - Under GINA, your HMO and other physical care rates will never increase based on the results of a genetic test.</li>
+          <li>Military-grade SHA1 and MD5 encryption of genomic data and data-transfer protocols.</li>
+          <!-- <li>Secure Sockets Layer (SSL) and AES-256 bit encryption.</li>
+          <li>Gene Guru applications and infrastructure are regularly tested for
+        security vulnerabilities and hardened to enhance security and protect
+        against attacks.</li>
+          <li>Gene Guru is designed with multiple layers of protection, including
+        secure data transfer, encryption, network configuration, and application- and user-level controls that are distributed across a scalable, secure infrastructure. State-of-the-art industry standards of encryptions are constantly implemented to keep your data safe.</li>
+          <li>Access via third-party apps - 
+        Some third party apps with Gene Guru integration will ask for permission to access your Gene Guru. To grant access, you will need to log in to your Gene Guru account and explicitly press the Authorize button when prompted. You can visit the My Apps section of your account settings to review the apps you've granted permission to and revoke access at your discretion.</li> -->
+          <li>All sequencing executed in CLIA labs - CLIA is a widely accepted national standard of certification of the integrity and consistency of laboratory procedures.</li>
+          <li>We promise to never share your data. - We will make good on your trust in us by always keeping your data protected within our systems. We use a number of physical, technical, and heuristic security measures to protect user information from unauthorized access. No one else will ever be granted access to it.</li>
+        </ul>
+      </div>
+    </div>
+</section>
 <footer class="footer">
   <p class="footer-text">
     &#169; 2014 Gene Guru, Inc <span> | </span>
@@ -447,6 +457,11 @@ window.setInterval(function() {
 </script>
 <script>
  new WOW().init();
+</script>
+<script>
+$('#email-collector > .button').aim({
+    className: 'open'
+});
 </script>
 </body>
 </html>
