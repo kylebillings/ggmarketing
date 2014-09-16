@@ -423,64 +423,17 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/WOW/dist/wow.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <script src="scripts/smooth-scroll.min.js"></script>
-        <script src="scripts/wow.min.js"></script>
-        <script src="scripts/mouse.parallax.js"></script>
-        <!-- endbuild -->
-<script>
-$(function() {
-    var header = $(".clear-header");
-    $(window).scroll(function() {    
-        var scroll = $(window).scrollTop();
     
-        if (scroll >= 100) {
-            header.removeClass('clear-header', 300).addClass("dark-header", 300);
-        } else {
-            header.removeClass("dark-header", 300).addClass('clear-header', 300);
-        }
-    });
-});
-</script>
-<script>
-$(function() {
-    var collector = $("#collector");
-    $(window).scroll(function() {    
-        var scroll = $(window).scrollTop();
-    
-        if (scroll >= 300) {
-            collector.removeClass('collector-closed', 300).addClass("collector-opened", 300);
-        } else {
-            collector.removeClass("collector-opened", 300).addClass('collector-closed', 300);
-        }
-    });
-});
-</script>
-<script>
-var deg = 0;
-window.setInterval(function() {
-    deg += .1;
-    $("#logo-rotate").css('-webkit-transform','rotate(' + deg + 'deg)');
-}, 50);
-</script>
-<script>
-    smoothScroll.init();
-</script>
-<script>
- new WOW().init();
-</script>
-<script>
-$(document).ready(function() {
-$('#home-background').mouseParallax({ moveFactor: 3 });
- 
-$('body').height(3000);
-});
-</script>
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="bower_components/smooth-scroll/dist/js/smooth-scroll.min.js"></script>
+    <script src="scripts/mouse.parallax.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/scripts.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
