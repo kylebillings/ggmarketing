@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Gene Guru | Genetic Nutrition</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -66,6 +66,7 @@
             <!-- EMAIL -->
             <div class="col-sm-8 col-sm-offset-2">
               <form name="userForm" ng-submit="submitForm()" novalidate>
+                <label for="signup">Access Your DNA-based diet.</label>
                 <div class="input-group input-group-lg">
                   <input id="email-field" placeholder="Enter Your Email Address" type="email" name="email" class="form-control" ng-model="user.email">
                   <span class="input-group-btn">
@@ -111,14 +112,17 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-4 wow fadeIn" data-wow-duration="1s">
+        <img src="images/scale.png" alt="Fat Loss" class="img-responsive">
         <h3>Fat Loss</h3>
         <p>The precise way your body burns, or metabolizes, fats are unique because of your individual genetics. By investigating the functional effectiveness of your genes involved in breakdown, storage and processing of food, we can provide a detailed nutritional and exercise framework for you to shed weight faster than ever before.</p>
       </div>
       <div class="col-sm-4 wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+        <img src="images/heart.png" alt="Well Being" class="img-responsive">
         <h3>Toning</h3>
           <p>Your genes that determine neuromuscular efficiency determine how muscle fibers should be maximally contracted at a given time without risking injury. We analyze the genetic dynamics of these muscular strength-building processes to design a regimen that can make you stronger than ever before.</p>
       </div>
       <div class="col-sm-4 wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
+        <img src="images/biceps.png" alt="Muscle Gain" class="img-responsive">
         <h3>Muscle Gain</h3>
           <p>Your muscles grow when the fibers are damaged and subsequently repaired, growing larger in the process. Numerous genes and proteins mediate and regulate this repair while others digest and process the nutrients your muscles need to grow. By analyzing your specific genetics, we can determine ideal exercise and nutritional strategies for you to rapidly increase muscle mass.</p>
       </div>
@@ -132,12 +136,14 @@
     <div class="row">
       <div class="col-sm-4 col-sm-offset-2">
         <h3>Meet Ashwin</h3>
-        <img src="images/ashwin.jpg" alt="Ashwin" class="headshot">
+        <!--<img src="images/ashwin.jpg" alt="Ashwin" class="headshot">-->
+        <img src="images/ashwin cutout.png" alt="Ashwin" class="img-responsive"/>
         <h4>Our CEO</h4>
       </div>
       <div class="col-sm-4">
         <h3>Meet Nus</h3>
-        <img src="images/nus.jpg" alt="Nus" class="headshot">
+        <!--<img src="images/nus.jpg" alt="Nus" class="headshot">-->
+        <img src="images/nus cutout.png" alt="Ashwin" class="img-responsive"/>
         <h4>Our COO</h4>
       </div>
     </div>
@@ -359,8 +365,11 @@
       </div>
     </div>
 </section>
-<div class="email-field text-center">
-            <div class="col-sm-6 col-sm-offset-3">
+
+<footer class="footer">
+  <div class="email-field text-center">
+            <div class="row">
+              <div class="col-sm-6 col-sm-offset-3">
               <form name="userForm" ng-submit="submitForm()" novalidate>
                 <label for="email">Access Your Optimized Diet</label>
                 <div class="input-group wow fadeIn" data-wow-duration="1s">
@@ -370,9 +379,9 @@
                   </span>
                 </div>
                 </form>
+              </div>
             </div>
     </div>
-<footer class="footer">
   <p class="footer-text">
     &#169; 2014 Gene Guru, Inc <span> | </span>
     <a href="/legal.html">legal</a> <span> | </span>

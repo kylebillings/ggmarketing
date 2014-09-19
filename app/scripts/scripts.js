@@ -23,9 +23,9 @@
 				window.setInterval(function() {
 				    deg += .1;
 				    //we need the transform to work across all browsers. 
-				    $("#logo-rotate").css('-webkit-transform','rotate(' + deg + 'deg)');
-				    $("#logo-rotate").css('-moz-transform','rotate(' + deg + 'deg)');
-				    $("#logo-rotate").css('transform','rotate(' + deg + 'deg)');
+				    //$("#logo-rotate").css('-webkit-transform','rotate(' + deg + 'deg)');
+				    //$("#logo-rotate").css('-moz-transform','rotate(' + deg + 'deg)');
+				    //$("#logo-rotate").css('transform','rotate(' + deg + 'deg)');
 				}, 50);
 				smoothScroll.init();
 			}
@@ -36,7 +36,7 @@
 		var options = {
 			moveFactor: 3
 		}
-		$('#home-background').mouseParallax(options);
-		$('body').height(3000);
+		//$('#home-background').mouseParallax(options);
+		//$('body').height(3000);
 	});
 }).call(this);
