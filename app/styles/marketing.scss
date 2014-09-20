@@ -10,6 +10,12 @@
 	background: linear-gradient(135deg, #591296 0%,#42075c 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#591296', endColorstr='#42075c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	background: url("../images/lowpoly.png");
+	background-size: 100%;
+	@media only screen and (max-width: 775px){
+		background: url("../images/lowpoly 2.png") !important;
+		background-size: 100% !important;
+	}
+
 	}
 	
 	padding-top: 11%;
