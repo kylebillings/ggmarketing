@@ -58,7 +58,7 @@
     </div>
       </div>
     <section id="home">
-      <div id="home-background" class="mouse-bg"></div>
+      <div id="particles" class="mouse-bg"></div>
       <div class="container text-center">
         <h1>Gene Guru</h1>
         <h3>Personalized nutrition based on your genetics</h3><br/>
@@ -103,9 +103,9 @@
   <br>
 </section>-->
 <section id="science">
-  <div id="logo-rotate">
+  <!--<div id="logo-rotate">
     <img src="images/logo.svg" alt="">
-  </div>
+  </div>-->
   <div class="container text-center">
     <h3>Your body develops and functions according to the interactions between proteins. By understanding the intricacies of your DNA, you can optimize for certain lifestyle objectives.</h3>
   </div>
@@ -134,13 +134,13 @@
   <div class="container-fluid text-center card wow slideInUp" data-wow-duration="1s">
     <h1>Every output is different.</h1>
     <div class="row larger">
-      <div class="col-sm-4 col-sm-offset-2">
+      <div class="col-xs-4 col-xs-offset-2">
         <h3>Meet Ashwin</h3>
         <!--<img src="images/ashwin.jpg" alt="Ashwin" class="headshot">-->
         <img src="images/ashwin cutout.png" alt="Ashwin" class="img-responsive"/>
         <h4>Our CEO</h4>
       </div>
-      <div class="col-sm-4">
+      <div class="col-xs-4">
         <h3>Meet Nus</h3>
         <!--<img src="images/nus.jpg" alt="Nus" class="headshot">-->
         <img src="images/nus cutout.png" alt="Ashwin" class="img-responsive"/>
@@ -438,11 +438,24 @@
     
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="bower_components/smooth-scroll/dist/js/smooth-scroll.min.js"></script>
+    <script src="scripts/jquery.particleground.min.js"></script>
     <script src="scripts/mouse.parallax.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/about.js"></script>
     <script src="scripts/scripts.js"></script>
     <!-- endbuild -->
+    <script>
+      /**
+   * Particleground demo
+   * @author Jonathan Nicol - @mrjnicol
+   */
+
+  $(document).ready(function() {
+    $('#particles').particleground({
+      dotColor: '#C9A7E6',
+      lineColor: '#C9A7E6'
+    });
+  });</script>
 </body>
 </html>
