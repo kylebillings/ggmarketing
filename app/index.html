@@ -25,17 +25,21 @@
             <li><a class="light-pill" data-scroll href="#science">Science</a></li>
             <li><a class="light-pill" data-scroll href="#examples">Examples</a></li>
             <li><a class="light-pill" data-scroll href="#faq">FAQ</a></li>
-            <li class="last"><a class="light-pill" data-scroll href="#privacy">Privacy</a></li>
-            <li>
-              <div id="email-collector">
-              <div class="search-container">
-                <input type = "text" placeholder = "Email Address">
-                <a class="button btn btn-primary">
-                  Sign Up
-                </a>
-              </div>
+            <li><a class="light-pill" data-scroll href="#privacy">Privacy</a></li>
+            <li class="divider-vertical"></li>
+            <li class="dropdown">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+            <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+              <form name="userForm" ng-submit="submitForm()" novalidate>
+                <div class="input-group">
+                  <input placeholder="Enter Your Email Address" type="email" name="email" class="form-control" ng-model="user.email">
+                  <span class="input-group-btn">
+                  <button type="submit" class="btn btn-primary btn-block" ng-disabled="userForm.$invalid">Go!</button>
+                  </span>
+                </div>
+              </form>
             </div>
-            </li>
+          </li>
           </a>
         </div>
           </ul>
@@ -341,6 +345,23 @@
           </div>
   </div>
 </section>
+<div class="email-field text-center">
+            <div class="row">
+              <div class="col-sm-6 col-sm-offset-3">
+              <form name="userForm" ng-submit="submitForm()" novalidate>
+                <label for="email">Access Your Optimized Diet</label>
+                <div class="input-group wow fadeIn" data-wow-duration="1s">
+                  <input placeholder="Enter Your Email Address" type="email" name="email" class="form-control" ng-model="user.email">
+                  <span class="input-group-btn">
+                  <button type="submit" class="btn btn-primary btn-block" ng-disabled="userForm.$invalid">Go!</button>
+                  </span>
+                </div>
+                </form>
+              </div>
+            </div>
+            <br>
+            <hr>
+    </div>
 <section id="privacy">
   <div class="container text-center">
     <h1><span class="glyphicon glyphicon-lock"></span> Privacy</h1>
@@ -367,21 +388,6 @@
 </section>
 
 <footer class="footer">
-  <div class="email-field text-center">
-            <div class="row">
-              <div class="col-sm-6 col-sm-offset-3">
-              <form name="userForm" ng-submit="submitForm()" novalidate>
-                <label for="email">Access Your Optimized Diet</label>
-                <div class="input-group wow fadeIn" data-wow-duration="1s">
-                  <input placeholder="Enter Your Email Address" type="email" name="email" class="form-control" ng-model="user.email">
-                  <span class="input-group-btn">
-                  <button type="submit" class="btn btn-primary btn-block" ng-disabled="userForm.$invalid">Go!</button>
-                  </span>
-                </div>
-                </form>
-              </div>
-            </div>
-    </div>
   <p class="footer-text">
     &#169; 2014 Gene Guru, Inc <span> | </span>
     <a href="/legal.html">legal</a> <span> | </span>
@@ -450,6 +456,15 @@
    * Particleground demo
    * @author Jonathan Nicol - @mrjnicol
    */
+   $(function() {
+  // Setup drop down menu
+  $('.dropdown-toggle').dropdown();
+ 
+  // Fix input element click problem
+  $('.dropdown input, .dropdown label').click(function(e) {
+    e.stopPropagation();
+  });
+});
 
   $(document).ready(function() {
     $('#particles').particleground({
