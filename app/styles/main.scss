@@ -1,6 +1,6 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
@@ -16,16 +16,24 @@ body {
 
 #particles {
     background: #591296; /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #591296 0%, #42075c 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#591296), color-stop(100%,#42075c)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg, #591296 0%,#42075c 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg, #591296 0%,#42075c 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg, #591296 0%,#42075c 100%); /* IE10+ */
-  background: linear-gradient(135deg, #591296 0%,#42075c 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#591296', endColorstr='#42075c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+  //background: -moz-linear-gradient(-45deg, #591296 0%, #42075c 100%); /* FF3.6+ */
+  //background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#591296), color-stop(100%,#42075c)); /* Chrome,Safari4+ */
+  //background: -webkit-linear-gradient(-45deg, #591296 0%,#42075c 100%); /* Chrome10+,Safari5.1+ */
+  //background: -o-linear-gradient(-45deg, #591296 0%,#42075c 100%); /* Opera 11.10+ */
+  //background: -ms-linear-gradient(-45deg, #591296 0%,#42075c 100%); /* IE10+ */
+  //background: linear-gradient(135deg, #591296 0%,#42075c 100%); /* W3C */
+  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#591296', endColorstr='#42075c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  //width: 100%;
+  //height: 100%;
+  //overflow: hidden;
+}
+
+.container-fluid-small {
+  width: 480px;
+  margin: 0 auto;
+  @media(max-width: 480px) {
+    width: auto;
+  }
 }
 
 .row {
@@ -421,4 +429,6 @@ FOOTER
     font-size: 14px !important;
   }
 }
-} 
+}
+
+

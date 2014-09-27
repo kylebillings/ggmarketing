@@ -40,13 +40,14 @@
 }
 
 .mouse-bg {
-		left: 0;
-		right: 0;
-		bottom: 0;
-		top: 0;
-		position: fixed;
-		z-index: -1;
-		}
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	//position: fixed;
+	position: absolute;
+	z-index: -1;
+}
 
 @include keyframes(rotate-helix) {
   0%   { @include transform(rotate(0deg) translate3d( 0, 0, 0)); }
@@ -69,7 +70,8 @@
 	}
 }
 .email-field {
-	background: #591296; /* Old browsers */
+	//background: #591296; /* Old browsers */
+	background: #222;
 	position: relative;
 	width: 100%;
 	padding: 20px ;
@@ -81,6 +83,7 @@
 	}
 	label {
 		color: #fff;
+		font-size: 1.2em;
 	}
 }
 
@@ -93,14 +96,15 @@
 
 #examples {
 	background: #591296; /* Old browsers */
-	background: -moz-linear-gradient(#591296 0%, #42075c 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, top, bottom, color-stop(0%,#591296), color-stop(100%,#42075c)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(#591296 0%,#42075c 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(#591296 0%,#42075c 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient( #591296 0%,#42075c 100%); /* IE10+ */
-	background: linear-gradient(#591296 0%,#42075c 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#591296', endColorstr='#42075c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-	background-size: 100%;
+	//background: -moz-linear-gradient(#591296 0%, #42075c 100%); /* FF3.6+ */
+	//background: -webkit-gradient(linear, top, bottom, color-stop(0%,#591296), color-stop(100%,#42075c)); /* Chrome,Safari4+ */
+	//background: -webkit-linear-gradient(#591296 0%,#42075c 100%); /* Chrome10+,Safari5.1+ */
+	//background: -o-linear-gradient(#591296 0%,#42075c 100%); /* Opera 11.10+ */
+	//background: -ms-linear-gradient( #591296 0%,#42075c 100%); /* IE10+ */
+	//background: linear-gradient(#591296 0%,#42075c 100%); /* W3C */
+	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#591296', endColorstr='#42075c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	//background-size: cover;
+	background-repeat: repeat;
 	padding-bottom: 0;
 	@media (min-width: 1200px) {
     		padding-bottom: 30px;
@@ -156,41 +160,78 @@
 }
 
 #privacy {
-	background-color: #591296;
+	//background-color: #591296;
+	background: #1B1B1B;
 	color: #fff;
 }
 
+@mixin background-size($x) {
+	-webkit-background-size: $x;
+	-moz-background-size: $x;
+	background-size: $x;
+}
+
+@mixin border-radius($x) {
+	-webkit-border-radius: $x;
+	-moz-border-radius: $x;
+	border-radius: $x;
+}
+
 #faq {
-	h1 {
-		color: #FFF;
-	}
-	background: url("../images/lowpoly.png");
+	h1 { color: #FFF; }
+	border: none;
+	background: #591296; /* Old browsers */
+	background: -moz-linear-gradient(top,  #591296 11%, #440a77 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(11%,#591296), color-stop(100%,#440a77)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #591296 11%,#440a77 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #591296 11%,#440a77 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #591296 11%,#440a77 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #591296 11%,#440a77 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#591296', endColorstr='#440a77',GradientType=0 ); /* IE6-9 */
 	.panel-heading {
 		padding: 0px;
+		//background: #591296;
+		background: transparent;
+		@include border-radius(0);
 		:hover {
-			background-color: #591296;
+			//background-color: #591296;
+
 			color: #fff;
 		}
 		.panel-title > a {
 			display: block;
 			padding: 15px;
-			border-radius: 4px;
-			:hover {
-				border-radius: 4px;;
+			color: white;
+			border-bottom: 5px solid white;
+			font-size: 1.25em;
+			&:hover {
 				text-decoration: none;
 			}
 		}
 		a:hover {
 			text-decoration: none;
-			border-style: 4px;
 		}
+		+ .panel-collapse {
+			> .panel-body {
+				border: none;
+			}
+		}
+	}
+	.panel-body {
+		padding: 25px;
 	}
 	.panel {
 		border: none;
+		@include border-radius(0);
+		background-color: transparent !important;
+		color: white !important;
+		box-shadow: none;
 	}
 	blockquote {
 		font-weight: 300;
-		border-left: 5px solid #5C388A;
+		border-left: 5px solid white;
+		box-shadow: none;
+		margin-bottom: 0;
 	}
 }
 //#42075C, #250A30, #FCFCFC

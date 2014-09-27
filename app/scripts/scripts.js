@@ -10,6 +10,7 @@
 			init = function() {
 				$(window).scroll(function() {
 					var scroll = $(window).scrollTop();
+					
 					if (scroll >= 100) {
 			            header.removeClass(CLEAR, 300).addClass(DARK, 300);
 			        } else if(scroll >= 300) {
@@ -27,7 +28,7 @@
 				    //$("#logo-rotate").css('-moz-transform','rotate(' + deg + 'deg)');
 				    //$("#logo-rotate").css('transform','rotate(' + deg + 'deg)');
 				}, 50);
-				smoothScroll.init();
+				//smoothScroll.init();
 			}
 		return init();
 	});
@@ -36,6 +37,30 @@
 		var options = {
 			moveFactor: 3
 		}
+		var optionsS = {
+			dotColor: '#C9A7E6',
+			lineColor: '#C9A7E6',
+			directionX: 'center',
+			density: 50000,
+		
+		}
+ 		
+ 		$('#particles').particleground(optionsS);
+ 		$('#particles').particleground('start');
+		/*
+		$(window).scroll(function() {
+		   var hT = $('#particles-two').offset().top,
+		       hH = $('#particles-two').outerHeight(),
+		       wH = $(window).height(),
+		       wS = $(this).scrollTop();
+		    console.log((hT-wH) , wS);
+		   if (wS > (hT+hH-wH)){
+ 				$('#particles-two').particleground(optionsS);
+ 				$('#particles-two').particleground('start');
+ 				return -1;
+		   }
+		});
+ 		*/
 		//$('#home-background').mouseParallax(options);
 		//$('body').height(3000);
 	});
