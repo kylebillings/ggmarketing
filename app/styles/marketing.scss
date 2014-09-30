@@ -242,4 +242,28 @@
 		margin-bottom: 0;
 	}
 }
+#confirmation {
+	.glyphicon {
+		font-size: 3em;
+	}
+	.glyphicon-envelope {
+		font-size: 5em;
+	}
+	.btn {
+		margin: 15px;
+	}
+	.btn:hover {
+		background-color: #591296;
+		color: #fff;
+	}
+	#sharebuttons {
+		a {
+			color: #fff;
+		}
+		a:hover {
+			text-decoration: none;
+			color: #fff !important;
+		}
+	}
+}
 //#42075C, #250A30, #FCFCFC
