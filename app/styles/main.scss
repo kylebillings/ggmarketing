@@ -1,6 +1,6 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
-@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
 // endbower
 
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
@@ -209,6 +209,9 @@ p {
   background-color: rgba(255,255,255,1) !important;
   border-bottom: 1px solid #f6f6f6;
   box-shadow: 0 .05rem 1rem rgba(0,0,0,.15);
+  @media only screen and (max-width: 480px){
+      display: none !important;
+      }
   a {
     color: #591296 !important;
     :hover {
